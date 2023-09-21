@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>getlinked | Home</title>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/2bfe15d79d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/src/app.js" defer></script>
+  </head>
+  <body class="bg-[#150E28] text-[#FFFFFF] relative z-[100]">
+    <header
+      class="flex items-center justify-between pt-[2rem] pb-[1.5rem] text-[#FFFFFF] border-solid border-[#ffffff2E] border-b-[0.01px] px-[3rem]"
+    >
+      <a
+        href="#"
+        class="w-[40%] text-[#FFFFFF] text-[18px] md:text-[36px] font-[700] leading-normal"
+      >
+        get<span class="text-[#D434FE]">linked</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-[3rem] w-[40%] justify-end">
+        <a href="" class="capitalize">timeline</a>
+        <a href="" class="capitalize">overview</a>
+        <a href="" class="capitalize">FAQs</a>
+        <a href="/src/contact.html" class="capitalize">contact</a>
+      </nav>
+      <a href="/src/register.html" class="hidden w-[20%] lg:flex justify-end">
+        <button class="gradient rounded-[4px] w-[40%] py-[10px]">
+          Register
+        </button>
+      </a>
+
+      <div class="flex flex-col gap-[5px] w-[35px] lg:hidden menu-icon">
+        <span class="w-[50%] h-[2px] bg-[white] rounded-[3px]"></span>
+        <span class="w-[100%] h-[2px] bg-[white] rounded-[3px]"></span>
+        <span class="w-[50%] h-[2px] bg-[white] rounded-[3px] self-end"></span>
+      </div>
+    </header>
+
+    <!-- Hamurger menu -->
+    <section
+      class="-translate-x-[100%] bg-[#150E28] fixed inset-0 z-50 h-[100vh] overflow-hidden pt-[8rem] px-[3rem] transition-transform duration-500 ease-linear menu"
+    >
+      <nav
+        class="flex flex-col gap-[2rem] text-[18px] font-[500] leading-[21.78px]"
+      >
+        <a href="" class="capitalize">timeline</a>
+        <a href="" class="capitalize">overview</a>
+        <a href="" class="capitalize">FAQs</a>
+        <a href="/src/contact.html" class="capitalize">contact</a>
+      </nav>
+      <a
+        href="/src/register.html"
+        class="gradient rounded-[4px] py-[10px] px-[18px] mt-[2rem]"
+      >
+        Register
+      </a>
+      <div
+        class="absolute top-[2rem] right-[3rem] w-[3rem] h-[3rem] rounded-[50%] grid place-items-center border-[1px] border-solid border-img"
+      >
+        <i
+          class="fa fa-times text-[18px] text-[#ffffff] close"
+          aria-hidden="true"
+        ></i>
+      </div>
+    </section>
+
+    <main class="">
+      <!-- HERO -->
+      <section
+        class="border-solid border-[#ffffff2E] border-b-[0.01px] px-[2rem] lg:px-[3rem] pt-[3rem]"
+      >
+        <h3
+          class="text-center lg:text-end font-[700] text-[16px] leading-[19px] md:text-[36px] md:leading-[43.88px]"
+        >
+          Igniting a revolution in HR Innovation
+        </h3>
+
+        <section
+          class="flex flex-col lg:flex-row items-center gap-[2rem] pt-[3rem]"
+        >
+          <div
+            class="flex flex-col items-center w-[100%] lg:w-[50%] text-center lg:text-start lg:items-start"
+          >
+            <h1
+              class="text-[32px] leading-[40px] md:text-[80px] font-[700] md:leading-[98.4px]"
+            >
+              getlinked Tech Hackathon <span class="text-[#D434FE]">1.0</span>
+            </h1>
+            <p
+              class="text-[13px] leading-[23px] md:text-[20px] md:leading-[33.2px] font-[400] md:w-[80%] pt-[.3rem]"
+            >
+              Participate in getLinked tech hackathon 2023 stand a chance to win
+              a big prize
+            </p>
+            <div class="mt-[2rem]">
+              <button class="gradient rounded-[4px] px-[22px] py-[10px]">
+                Register
+              </button>
+            </div>
+
+            <!-- time -->
+            <div
+              class="flex items-center gap-[1rem] lg:gap-[2rem] lg:text-[64px] mt-[1.5rem] lg:mt-[2.5rem] time"
+            >
+              <p>
+                <span
+                  id="hours"
+                  class="text-[48px] leading-[64px] lg:leading-[85.12px]"
+                  >00</span
+                >
+                <small class="text-[10px] align-baseline">H</small>
+              </p>
+              <p>
+                <span
+                  id="minutes"
+                  class="text-[48px] leading-[64px] lg:leading-[85.12px]"
+                  >00</span
+                >
+                <small class="text-[10px] align-baseline">M</small>
+              </p>
+              <p>
+                <span
+                  id="seconds"
+                  class="text-[48px] leading-[64px] lg:leading-[85.12px]"
+                  >00</span
+                >
+                <small class="text-[10px] align-baseline">S</small>
+              </p>
+            </div>
+          </div>
+
+          <div class="w-[100%] lg:w-[50%] relative">
+            <img src="/src/Images/glass_man.svg" alt="" class="grayscale" />
+          </div>
+        </section>
+      </section>
+
+      <!-- section 2 -->
+      <section
+        class="flex flex-col lg:flex-row items-center justify-center gap-[3rem] lg:gap-[2rem] border-solid border-[#ffffff2E] border-b-[0.01px] px-[2rem] lg:px-0 py-[3rem]"
+      >
+        <div class="w-[100%] flex justify-center lg:block lg:w-[40%] idea-img">
+          <img src="/src/Images/The big idea.png" alt="the big idea" />
+        </div>
+        <div class="w-[100%] lg:w-[40%] text-center lg:text-start">
+          <h3
+            class="text-[20px] leading-[26.6px] md:leading-[43px] md:text-[32px] font-[700]"
+          >
+            Introduction to getlinked
+            <span class="text-[#D434FE] block">techHackathon 1.0</span>
+          </h3>
+          <p
+            class="text-[13px] md:text-[14px] leading-[27.5px] mt-[1rem] lg:w-[90%]"
+          >
+            Our tech hackathon is a melting pot of visionaries, and its purpose
+            is as clear as day: to shape the future. Whether you're a coding
+            genius, a design maverick, or a concept wizard, you'll have the
+            chance to transform your ideas into reality. Solving real-world
+            problems, pushing the boundaries of technology, and creating
+            solutions that can change the world, that's what we're all about!
+          </p>
+        </div>
+      </section>
+
+      <!-- rules -->
+      <section
+        class="flex flex-col items-center justify-center gap-[3rem] lg:gap-[2rem] lg:flex-row-reverse border-solid border-[#ffffff2E] border-b-[0.01px] px-[2rem] lg:px-0"
+      >
+        <div class="w-[100%] lg:w-[40%] flex justify-end rule">
+          <img src="/src/Images/rules.svg" alt="the big idea" />
+        </div>
+        <div class="w-[100%] lg:w-[40%] text-center lg:text-start">
+          <h3
+            class="text-[20px] leading-[26.6px] md:leading-[43px] md:text-[32px] font-[700]"
+          >
+            Rules and <span class="block text-[#D434FE]">Guidelines</span>
+          </h3>
+          <p
+            class="text-[13px] md:text-[14px] leading-[27.5px] mt-[1rem] lg:w-[90%]"
+          >
+            Our tech hackathon is a melting pot of visionaries, and its purpose
+            is as clear as day: to shape the future. Whether you're a coding
+            genius, a design maverick, or a concept wizard, you'll have the
+            chance to transform your ideas into reality. Solving real-world
+            problems, pushing the boundaries of technology, and creating
+            solutions that can change the world, that's what we're all about!
+          </p>
+        </div>
+      </section>
+
+      <!-- criteria section -->
+      <section
+        class="flex flex-col lg:flex-row items-center justify-center gap-[2rem] border-solid border-[#ffffff2E] border-b-[0.01px] py-[3rem] px-[2rem] lg:px-0"
+      >
+        <div class="w-[100%] lg:w-[40%] judge">
+          <img src="/src/Images/criteria.svg" alt="the big idea" />
+        </div>
+        <div class="w-[100%] lg:w-[40%] text-center lg:text-start">
+          <h3
+            class="text-[20px] leading-[26.6px] md:leading-[43px] md:text-[32px] font-[700]"
+          >
+            Judging Criteria
+            <span class="block text-[#D434FE]">Key attributes</span>
+          </h3>
+          <div class="flex flex-col gap-[15px] pt-[15px]">
+            <p
+              class="text-[13px] md:text-[14px] leading-[27.5px] mt-[1rem] font-[400]"
+            >
+              <span class="text-[#FF26B9]">Innovation and Creativity:</span>
+              Evaluate the uniqueness and creativity of the solution. Consider
+              whether it addresses a real-world problem in a novel way or
+              introduces innovative features.
+            </p>
+            <p
+              class="text-[13px] md:text-[14px] leading-[27.5px] mt-[1rem] font-[400]"
+            >
+              <span class="text-[#FF26B9]">Functionality:</span>
+              Assess how well the solution works. Does it perform its intended
+              functions effectively and without major issues? Judges would
+              consider the completeness and robustness of the solution.
+            </p>
+            <p
+              class="text-[13px] md:text-[14px] leading-[27.5px] mt-[1rem] font-[400]"
+            >
+              <span class="text-[#FF26B9]"> Impact and Relevance:</span>
+              Determine the potential impact of the solution in the real world.
+              Does it address a significant problem, and is it relevant to the
+              target audience? Judges would assess the potential social,
+              economic, or environmental benefits.
+            </p>
+            <p
+              class="text-[13px] md:text-[14px] leading-[27.5px] mt-[1rem] font-[400]"
+            >
+              <span class="text-[#FF26B9]"> Technical Complexity: </span>
+              Evaluate the technical sophistication of the solution. Judges
+              would consider the complexity of the code, the use of advanced
+              technologies or algorithms, and the scalability of the solution.
+            </p>
+            <p
+              class="text-[13px] md:text-[14px] leading-[27.5px] mt-[1rem] font-[400]"
+            >
+              <span class="text-[#FF26B9]"> Adherence to Hackathon Rules:</span>
+              Judges will Ensure that the team adhered to the rules and
+              guidelines of the hackathon, including deadlines, use of specific
+              technologies or APIs, and any other competition-specific
+              requirements.
+            </p>
+          </div>
+
+          <div class="mt-[2rem]">
+            <button class="gradient rounded-[4px] py-[10px] w-[50%] lg:w-[25%]">
+              Read More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ section -->
+      <section
+        class="flex flex-col-reverse lg:flex-row-reverse items-center justify-center gap-[2rem] pb-[3rem] pt-[7rem] border-solid border-[#ffffff2E] border-b-[0.01px] px-[2rem] lg:px-0"
+      >
+        <div class="w-[100%] lg:w-[40%] faq-img">
+          <img src="/src/Images/faq.svg" alt="faq" />
+        </div>
+        <div class="w-[100%] lg:w-[40%]">
+          <h3
+            class="text-[20px] text-center lg:text-start leading-[26.6px] md:leading-[43px] md:text-[32px] font-[700] capitalize"
+          >
+            Frequently asked
+            <span class="block text-[#D434FE]">questions</span>
+          </h3>
+          <p
+            class="mt-[10px] lg:mt-0 text-[12px] text-center lg:text-start md:text-[14px] leading-[28px] font-[700] lg:w-[60%]"
+          >
+            We got answers to the questions that you might want to ask about
+            getlinked Hackathon 1.0
+          </p>
+
+          <section class="flex flex-col gap-[1rem] mt-[3rem] lg:w-[80%] faq">
+            <!-- question 1 -->
+            <div
+              class="font-[400] text-[14px] leading-[27.5px] pb-[10px] border-solid border-b-[1px] border-[#D434FE] active faq-box"
+            >
+              <div class="flex justify-between items-center gap-[.5rem]">
+                <h3 class="">
+                  Can I work on a project I started before the hackathon?
+                </h3>
+                <i
+                  class="fa fa-minus text-[#D434FE] text-[20px] cursor-pointer"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="hidden text-[12px] font-[300] pt-[10px] answer">
+                No, the program is completely free thanks to Ingressive For Good
+              </p>
+            </div>
+
+            <!-- question  2-->
+            <div
+              class="font-[400] text-[14px] leading-[27.5px] pb-[10px] border-solid border-b-[1px] border-[#D434FE] faq-box"
+            >
+              <div class="flex justify-between items-center gap-[.5rem]">
+                <h3 class="">
+                  What happens if I need help during the hackathon?
+                </h3>
+                <i
+                  class="fa fa-plus text-[#D434FE] text-[20px] cursor-pointer"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="hidden text-[12px] font-[300] pt-[10px] answer">
+                No, the program is completely free thanks to Ingressive For Good
+              </p>
+            </div>
+
+            <!-- question 3 -->
+            <div
+              class="font-[400] text-[14px] leading-[27.5px] pb-[10px] border-solid border-b-[1px] border-[#D434FE] faq-box"
+            >
+              <div class="flex justify-between items-center gap-[.5rem]">
+                <h3 class="">
+                  What happens if I don't have an idea for a project?
+                </h3>
+                <i
+                  class="fa fa-plus text-[#D434FE] text-[20px] cursor-pointer"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="hidden text-[12px] font-[300] pt-[10px] answer">
+                No, the program is completely free thanks to Ingressive For Good
+              </p>
+            </div>
+
+            <!-- question 4 -->
+            <div
+              class="font-[400] text-[14px] leading-[27.5px] pb-[10px] border-solid border-b-[1px] border-[#D434FE] faq-box"
+            >
+              <div class="flex justify-between items-center gap-[.5rem]">
+                <h3 class="">
+                  Can I join a team or do I have to come with one?
+                </h3>
+                <i
+                  class="fa fa-plus text-[#D434FE] text-[20px] cursor-pointer"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="hidden text-[12px] font-[300] pt-[10px] answer">
+                No, the program is completely free thanks to Ingressive For Good
+              </p>
+            </div>
+
+            <!-- question 5 -->
+            <div
+              class="font-[400] text-[14px] leading-[27.5px] pb-[10px] border-solid border-b-[1px] border-[#D434FE] faq-box"
+            >
+              <div class="flex justify-between items-center gap-[.5rem]">
+                <h3 class="">What happens after the hackathon ends</h3>
+                <i
+                  class="fa fa-plus text-[#D434FE] text-[20px] cursor-pointer"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="hidden text-[12px] font-[300] pt-[10px] answer">
+                No, the program is completely free thanks to Ingressive For Good
+              </p>
+            </div>
+
+            <!-- question 6 -->
+            <div
+              class="font-[400] text-[14px] leading-[27.5px] pb-[10px] border-solid border-b-[1px] border-[#D434FE] faq-box"
+            >
+              <div class="flex justify-between items-center gap-[.5rem]">
+                <h3 class="">
+                  Can I work on a project I started before the hackathon?
+                </h3>
+                <i
+                  class="fa fa-plus text-[#D434FE] text-[20px] cursor-pointer"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="hidden text-[12px] font-[300] pt-[10px] answer">
+                No, the program is completely free thanks to Ingressive For Good
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- prizes -->
+      <section class="pt-[3rem] pb-[4rem] bg-[#100B20] px-[2rem] lg:px-0">
+        <!-- header -->
+        <div class="lg:pl-[55%] text-center lg:text-start">
+          <h3 class="leading-[43px] text-[32px] font-[700] capitalize">
+            Prizes and
+            <span class="block text-[#D434FE]">Rewards</span>
+          </h3>
+          <p class="text-[16px] leading-[27.34px] font-[400] lg:w-[80%]">
+            Highlight of the prizes or rewards for winners and for participants.
+          </p>
+        </div>
+
+        <!-- flex container -->
+        <section
+          class="flex flex-col lg:flex-row items-center justify-center gap-[2rem] mt-[3rem]"
+        >
+          <div class="w-[100%] flex justify-center lg:block lg:w-[40%] trophy">
+            <img src="/src/Images/trophy.svg" alt="" />
+          </div>
+
+          <!-- medals -->
+          <div
+            class="w-[100%] lg:w-[40%] pt-[3rem] md:pt-[8rem] lg:pt-[6rem] flex items-center justify-center gap-[.5rem] md:gap-[1rem]"
+          >
+            <!-- silver -->
+            <div
+              class="bg-[#D434FE1E] rounded-[.5rem] border-solid border-[1px] border-[#D434FE] flex flex-col p-[10px] relative pt-[2rem] pb-[1rem] md:pt-[5rem] text-center"
+            >
+              <img
+                src="/src/Images/silver_medal.svg"
+                alt="silver medal"
+                class="absolute w-[80%] -top-[15%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+              />
+              <h2
+                class="text-[12px] md:text-[2.25rem] font-[700] leading-[26px] md:leading-[2.9rem]"
+              >
+                2nd
+              </h2>
+              <p class="text-[12px] md:text-[25px] font-[600]">Runner</p>
+              <h2
+                class="text-[14px] md:text-[2rem] leading-[31px] md:leading-[3.5rem] font-[700] pt-[10px] text-[#D434FE]"
+              >
+                N300,000
+              </h2>
+            </div>
+
+            <!-- gold -->
+            <div
+              class="rounded-[.5rem] border-solid border-[1px] border-[#903AFF] bg-[#903AFF1F] flex flex-col p-[10px] relative pt-[2rem] pb-[1rem] md:pt-[5rem] text-center mt-[1.5rem]"
+            >
+              <div>
+                <img
+                  src="/src/Images/gold_medal.png"
+                  alt="silver medal"
+                  class="absolute -top-[15%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+                />
+              </div>
+              <h2
+                class="text-[12px] md:text-[2.25rem] font-[700] leading-[26px] md:leading-[2.9rem]"
+              >
+                1st
+              </h2>
+              <p class="text-[12px] md:text-[25px] font-[600]">Runner</p>
+              <h2
+                class="text-[14px] md:text-[2rem] leading-[31px] md:leading-[3.5rem] text-[#D434FE] font-[600] pt-[10px]"
+              >
+                N400,000
+              </h2>
+            </div>
+
+            <!-- bronze -->
+            <div
+              class="bg-[#D434FE1E] rounded-[.5rem] border-solid border-[1px] border-[#D434FE] flex flex-col p-[10px] relative pt-[2rem] pb-[1rem] md:pt-[5rem] text-center"
+            >
+              <img
+                src="/src/Images/bronze_medal.png"
+                alt="silver medal"
+                class="absolute w-[80%] -top-[15%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+              />
+              <h2
+                class="text-[12px] lg:text-[2.25rem] font-[700] leading-[26px] lg:leading-[2.9rem]"
+              >
+                3rd
+              </h2>
+              <p class="text-[12px] md:text-[25px] font-[600]">Runner</p>
+              <h2
+                class="text-[14px] md:text-[2rem] leading-[31px] md:leading-[3.5rem] font-[700] pt-[10px] text-[#D434FE]"
+              >
+                N150,000
+              </h2>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- partners -->
+      <section
+        class="flex flex-col gap-[4rem] justify-center items-center border-solid border-[#ffffff2E] border-b-[0.01px] py-[3rem] px-[2rem] lg:px-0"
+      >
+        <!-- header  -->
+        <div class="text-center md:w-[70%] lg:w-[35%]">
+          <h3 class="leading-[50px] text-[32px] font-[700] capitalize">
+            Partners and Sponsors
+          </h3>
+          <p class="text-[16px] leading-[27.34px] font-[400]">
+            Getlinked Hackathon 1.0 is honored to have the following major
+            companies as its partners and sponsors
+          </p>
+        </div>
+
+        <div class="lg:w-[80%]">
+          <img src="./src/Images/partners.svg" alt="partners and sponsors" />
+        </div>
+      </section>
+
+      <!-- privacy policy -->
+      <section class="flex flex-col items-center py-[3rem] px-[2rem] lg:px-0">
+        <!-- header  -->
+        <div class="lg:w-[80%] text-center lg:text-start">
+          <h3
+            class="text-[20px] leading-[26.6px] md:leading-[50px] md:text-[32px] font-[700] capitalize"
+          >
+            Privacy Policy and <span class="text-[#D434FE] block">Terms</span>
+          </h3>
+          <p
+            class="text-[12px] md:text-[16px] leading-[27.34px] font-[400] pt-[10px] pb-[15px] text-[#ffffffBF]"
+          >
+            Last updated on September 12, 2023
+          </p>
+          <p
+            class="text-[12px] md:text-[16px] leading-[27.34px] font-[400] lg:w-[40%]"
+          >
+            Below are our privacy & policy, which outline a lot of goodies. it’s
+            our aim to always take of our participant
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col lg:flex-row justify-center gap-[2rem] items-center"
+        >
+          <div
+            class="mt-[2rem] lg:m-0 flex flex-col gap-[.5rem] border-solid border-[1px] border-[#D434FE] rounded-[5px] px-[1rem] lg:px-[2rem] py-[2.5rem] w-[100%] lg:w-[40%]"
+          >
+            <p
+              class="text-[12px] text-center lg:text-start md:text-[14px] leading-[33px] lg:w-[88%] mb-[1rem]"
+            >
+              At getlinked tech Hackathon 1.0, we value your privacy and are
+              committed to protecting your personal information. This Privacy
+              Policy outlines how we collect, use, disclose, and safeguard your
+              data when you participate in our tech hackathon event. By
+              participating in our event, you consent to the practices described
+              in this policy.
+            </p>
+
+            <!-- licensing -->
+            <div>
+              <h2 class="font-[700] leading-[34.62px] text-[#D434FE]">
+                Licensing Policy
+              </h2>
+              <h3 class="font-[700] leading-[30.3px] mb-[10px]">
+                Here are terms of our standard license
+              </h3>
+              <ul
+                class="check pl-[1.8rem]"
+                style="list-style-image: url(./src/Images/list\ terms.svg)"
+              >
+                <li
+                  class="text-[12px] md:text-[14px] leading-[33px] lg:w-[88%]"
+                >
+                  The Standard License grants you a non-exclusive right to
+                  navigate and register for our event
+                </li>
+                <li
+                  class="text-[12px] md:text-[14px] leading-[33px] lg:w-[88%]"
+                >
+                  You are licensed to use the item available at any free source
+                  sites, for your project developement
+                </li>
+              </ul>
+            </div>
+            <div class="self-center mt-[16px]">
+              <button class="gradient rounded-[4px] py-[10px] px-[18px]">
+                Read More
+              </button>
+            </div>
+          </div>
+          <div class="w-[100%] flex justify-center lg:w-[40%] lock">
+            <img src="/src/Images/lock.png" alt="lock" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="flex flex-col items-center py-[3rem] pb-[4rem] bg-[#100B20]">
+      <section
+        class="flex flex-col lg:flex-row justify-between w-[70%] gap-[3rem] lg:gap-0 lg:w-[80%]"
+      >
+        <div class="lg:w-[40%]">
+          <p
+            class="w-[40%] text-[#FFFFFF] text-[30px] font-[700] leading-[37px]"
+          >
+            get<span class="text-[#D434FE]">linked</span>
+          </p>
+          <p class="text-[12px] leading-[20.69px] pt-[10px] lg:w-[80%]">
+            Getlinked Tech Hackathon is a technology innovation program
+            established by a group of organizations with the aim of showcasing
+            young and talented individuals in the field of technology
+          </p>
+          <h5 class="text-[12px] leading-[20.69px] font-[400] pt-[3rem]">
+            <a href="">
+              Terms of service <span class="text-[#D434FE]">|</span> Privacy
+              Policy
+            </a>
+          </h5>
+        </div>
+
+        <!-- useful links -->
+        <div class="lg:w-[30%] lg:flex justify-end">
+          <div>
+            <h3 class="text-[#D434FE] text-[14px]">Useful link</h3>
+            <ul class="flex flex-col gap-[10px] mt-[10px]">
+              <li><a href="">overview</a></li>
+              <li><a href="">Timeline</a></li>
+              <li><a href="">FAQs</a></li>
+              <li><a href="">Register</a></li>
+            </ul>
+
+            <div class="flex items-center gap-[10px] mt-[13px]">
+              <p class="text-[#D434FE]">Follow us</p>
+              <i class="fa fa-instagram text-[#ffffff]" aria-hidden="true"></i>
+              <img src="/src/Images/x.svg" alt="twitter" />
+              <i class="fa fa-facebook text-[#ffffff]" aria-hidden="true"></i>
+              <i class="fa fa-linkedin text-[#ffffff]" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- contact -->
+        <div class="lg:w-[30%] lg:flex justify-end">
+          <div>
+            <h3 class="text-[#D434FE] text-[14px]">Contact Us</h3>
+
+            <div class="flex items-center gap-[10px] mt-[14px]">
+              <i
+                class="fa fa-volume-control-phone text-[#ffffff]"
+                aria-hidden="true"
+              ></i>
+              <p class="text-[12px] leading-[14.63px]">+234 6707653444</p>
+            </div>
+            <div class="flex gap-[10px] mt-[16px]">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <p class="text-[12px] leading-[14.63px]">
+                27,Alara Street <br />
+                Yaba 100012 <br />
+                Lagos State
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <p class="text-[12px] font-[400] text-center mt-[3rem]">
+        All rights reserved.&copy; getlinked Ltd.
+      </p>
+    </footer>
+  </body>
+</html>

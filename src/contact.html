@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>getlinked | Home</title>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/2bfe15d79d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./app.js" defer></script>
+  </head>
+  <body
+    class="bg-[#150E28] px-[1.5rem] md:px-[5rem] lg:px-[7rem] text-[#FFFFFF] pb-[4rem]"
+    style="
+      background-image: url(./Images/Purple-Lens-Flare-PNG.png),
+        url(./Images/register-bg-2.png);
+      background-repeat: no-repeat;
+      background-position: top 280px left 900px, top -52px left -258px;
+    "
+  >
+    <!-- Header -->
+    <header
+      class="flex items-center justify-between pt-[2rem] pb-[1.5rem] text-[#FFFFFF]"
+    >
+      <a
+        href="/index.html"
+        class="hidden lg:block w-[40%] text-[#FFFFFF] text-[18px] md:text-[36px] font-[700] leading-normal"
+      >
+        get<span class="text-[#D434FE]">linked</span>
+      </a>
+      <div
+        class="lg:hidden text-[18px] font-[700] leading-normal border-img border-solid border-[1px] w-[3rem] h-[3rem] grid place-items-center"
+      >
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </div>
+      <nav class="hidden lg:flex items-center gap-[3rem] w-[40%] justify-end">
+        <a href="" class="capitalize">timeline</a>
+        <a href="" class="capitalize">overview</a>
+        <a href="" class="capitalize">FAQs</a>
+        <a href="" class="capitalize">contact</a>
+      </nav>
+      <div class="hidden w-[20%] lg:flex justify-end">
+        <a
+          href="./register.html"
+          class="gradient rounded-[4px] w-[60%] py-[10px] text-center"
+        >
+          Register
+        </a>
+      </div>
+    </header>
+
+    <main
+      class="flex flex-col-reverse lg:flex-row justify-between mx-auto lg:pt-[3rem] lg:w-[90%]"
+    >
+      <div
+        class="w-[100%] lg:w-[40%] flex flex-col justify-center gap-[1rem]"
+        style="
+          background-image: url(/src/Images/star.svg),
+            url(/src/Images/star_purple.svg), url(/src/Images/star_purple.svg);
+          background-repeat: no-repeat;
+          background-position: bottom 0 left 5%, top 0 left 5%,
+            right 0 bottom 20%;
+        "
+      >
+        <div class="hidden lg:flex flex-col justify-center gap-[1rem]">
+          <h2 class="text-[32px] leading-[40px] font-[600] text-[#D434FE]">
+            Contact Us
+          </h2>
+
+          <p class="leading-[20px] font-[400]">
+            Contact <br />
+            Information
+          </p>
+          <p class="leading-[20px] font-[400]">
+            27,Alara Street <br />
+            Yaba 100012 Lagos <br />
+            State
+          </p>
+          <p class="leading-[20px] font-[400]">Call Us : 07067981819</p>
+          <p class="leading-[20px] font-[400]">
+            we are open from Monday-Friday <br />
+            08:00am - 05:00pm
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col items-center mt-[2rem] lg:mt-0 lg:items-start"
+        >
+          <p class="leading-[20px] font-[400] text-[#D434FE] lg:text-start">
+            Share on
+          </p>
+          <div class="flex items-center gap-[10px] mt-[1rem]">
+            <i
+              class="fa fa-instagram text-[#ffffff] text-[20px]"
+              aria-hidden="true"
+            ></i>
+            <img src="/src/Images/x.svg" alt="twitter" />
+            <i
+              class="fa fa-facebook text-[#ffffff] text-[20px]"
+              aria-hidden="true"
+            ></i>
+            <i
+              class="fa fa-linkedin text-[#ffffff] text-[20px]"
+              aria-hidden="true"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-[100%] lg:w-[55%] rounded-[.75rem] px-0 p-[2rem] lg:px-[2rem] bg-transparent md:bg-[#ffffff08] reg-box"
+        style="
+          background-image: url(/src/Images/star.svg),
+            url(/src/Images/starbright.svg);
+          background-repeat: no-repeat;
+          background-position: top 4% right 20%, bottom 0% right 5%;
+        "
+      >
+        <h1 class="text-[20px] leading-[24.6px] text-[#D434FE] font-[600]">
+          Questions or need assistance? <br />
+          Let us know about it!
+        </h1>
+        <p class="text-[12px] leading-[16px] font-[400] pt-[10px] lg:hidden">
+          Email us below to any question related <br />
+          to our event
+        </p>
+
+        <form
+          action=""
+          method="post"
+          class="mt-[2rem] flex flex-col gap-[1rem]"
+        >
+          <div class="form-input flex flex-col gap-[10px]">
+            <input
+              type="email"
+              id="email"
+              class="border-[1px] border-solid border-[#ffffff] px-[1rem] py-[10px] text-white font-[400] rounded-[5px] bg-transparent outline-none text-[14px]"
+              placeholder="Enter your email address"
+            />
+          </div>
+
+          <div class="form-input flex flex-col gap-[10px]">
+            <input
+              type="email"
+              id="email"
+              class="border-[1px] border-solid border-[#ffffff] px-[1rem] py-[10px] text-white font-[400] rounded-[5px] bg-transparent outline-none text-[14px]"
+              placeholder="Enter your email address"
+            />
+          </div>
+
+          <textarea
+            name="message"
+            id="msg"
+            cols="30"
+            rows="10"
+            class="border-[1px] border-solid border-[#ffffff] px-[1rem] py-[10px] font-400 rounded-[5px] bg-transparent outline-none text-[14px]"
+          >
+Message</textarea
+          >
+          <button
+            class="gradient font-[400] leading-[19.5px] py-[12px] rounded-[5px] mt-[10px] self-center px-[18px] submit-btn"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <!-- error message -->
+    <div
+      class="fixed right-[5%] top-[15%] p-[1rem] rounded-[5px] items-center gap-[20px] bg-[#903AFF] hidden error"
+    >
+      <p>Please, comepletely fill out the form</p>
+      <i class="fa fa-times close-err cursor-pointer"></i>
+    </div>
+  </body>
+</html>

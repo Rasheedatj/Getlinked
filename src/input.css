@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.time {
+  font-family: 'Unica One', cursive;
+}
+.gradient {
+  background: linear-gradient(
+    270deg,
+    #903aff 0%,
+    #d434fe 56.42%,
+    #ff26b9 99.99%,
+    #fe34b9 100%
+  );
+  /* background-size: 400%;
+  background-position: 100% 0;
+  transition: all 500ms; */
+}
+
+/* .gradient:hover {
+  background-position: 185% 90%;
+  transform: scale(1.05);
+} */
+
+.border-grad {
+  border: 2px solid;
+  border-image: linear-gradient(
+      270deg,
+      #903aff 0%,
+      #d434fe 56.42%,
+      #ff26b9 99.99%,
+      #fe34b9 100%
+    )
+    1;
+  border-radius: 5px;
+}
+
+/* 
+.hero::after {
+  content: url(/src/Images/bubble.png);
+  position: absolute;
+  right: 0%;
+  width: 50px;
+  inset: 0;
+  right: 50%;
+} */
+
+.border-img {
+  border-image: linear-gradient(to right, #ff5733, #6c2e93);
+  border-image-slice: 1;
+  border-radius: 50px;
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+.msg.open {
+  display: flex;
+}
+
+.faq-box.active .answer {
+  display: block;
+}
+
+.reg-box {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.msg {
+  background-color: rgba(21, 14, 40, 0.93);
+}
+
+.error.active {
+  display: flex;
+  animation: cookieSlide 750ms ease-in-out;
+}
+
+@keyframes cookieSlide {
+  0% {
+    transform: translateX(100%);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .reg-box {
+    box-shadow: none;
+  }
+}
