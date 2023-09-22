@@ -130,6 +130,7 @@ function init() {
         const animation = element.animate(animations, animateOpts);
         animation.play();
       });
+
       console.log('home');
       break;
     case '/src/register.html':
