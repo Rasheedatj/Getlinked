@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,500&family=Unica+One&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import 'style.css';
+
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -13,27 +20,26 @@ body {
   font-family: 'Unica One', cursive;
 }
 
-.gradient {
-  background: linear-gradient(
-    270deg,
+.border-grad::after,
+.border-grad::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 5px;
+  background: conic-gradient(
+    from var(--gradient-angle),
     #903aff 0%,
     #d434fe 56.42%,
     #ff26b9 99.99%,
     #fe34b9 100%
   );
+  z-index: -1;
+  animation: rotation 5s linear infinite;
 }
 
-.border-grad {
-  border: 2px solid;
-  border-image: linear-gradient(
-      270deg,
-      #903aff 0%,
-      #d434fe 56.42%,
-      #ff26b9 99.99%,
-      #fe34b9 100%
-    )
-    1;
-  border-radius: 5px;
+.border-grad::after {
+  filter: blur(3.5rem);
+  z-index: 2;
 }
 
 /* 
@@ -78,18 +84,11 @@ body {
   display: block;
 }
 
-.reg-box {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
 .error.active {
   transform: translateX(0);
   opacity: 1;
 }
 
-#loader > div {
-  animation: animate 1.5s infinite linear;
-}
 #loader > div:nth-child(1) {
   animation-delay: 0.5s;
 }
@@ -104,7 +103,7 @@ body {
   display: flex;
 }
 
-@keyframes animate {
+@keyframes spin {
   0% {
     opacity: 0.2;
     scale: 1;
@@ -118,9 +117,12 @@ body {
     scale: 1;
   }
 }
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
 
-@media screen and (max-width: 900px) {
-  .reg-box {
-    box-shadow: none;
+  100% {
+    --gradient-angle: 360deg;
   }
 }

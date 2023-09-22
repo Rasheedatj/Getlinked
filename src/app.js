@@ -24,6 +24,7 @@ const contactName = document.querySelector('.contact .name');
 const contactemail = document.querySelector('.contact .email');
 const contactMessage = document.querySelector('.contact textarea');
 const contactForm = document.querySelector('.contact');
+const silver = document.querySelectorAll('#silver');
 
 const animateElement = [trophy, cloud, padlock, judge, rule, idea];
 let countdownInterval;
@@ -89,6 +90,14 @@ function animateFunc() {
       transform: ' translateY(-20px)',
     },
   ];
+  const animationMedal = [
+    {
+      transform: 'rotate(0deg) scale(1)',
+    },
+    {
+      transform: 'rotate(5deg) scale(1.05)',
+    },
+  ];
 
   const animateOpts = {
     iterations: Infinity,
@@ -98,6 +107,10 @@ function animateFunc() {
 
   animateElement.forEach((element) => {
     const animation = element.animate(animations, animateOpts);
+    animation.play();
+  });
+  silver.forEach((element) => {
+    const animation = element.animate(animationMedal, animateOpts);
     animation.play();
   });
 }
@@ -237,6 +250,7 @@ async function postContact() {
     }
 
     const result = await data.json();
+    window.location.reload();
     console.log(result);
   } catch (error) {
     console.log(error);

@@ -10,11 +10,7 @@
       src="https://kit.fontawesome.com/2bfe15d79d.js"
       crossorigin="anonymous"
     ></script>
-    <!-- google font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;800&display=swap"
-      rel="stylesheet"
-    />
+
     <script src="./app.js" defer></script>
   </head>
   <body
@@ -50,10 +46,12 @@
           >contact</a
         >
       </nav>
-      <div class="hidden w-[20%] lg:flex justify-end">
+      <div
+        class="hidden w-[20%] lg:flex justify-end transition-all duration-300 ease-linear hover:scale-[1.1]"
+      >
         <a
           href="./register.html"
-          class="gradient rounded-[4px] w-[60%] py-[10px] text-center"
+          class="bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe34b9] rounded-[4px] w-[60%] py-[10px] text-center"
         >
           Register
         </a>
@@ -119,7 +117,7 @@
       </div>
 
       <div
-        class="w-[100%] lg:w-[55%] rounded-[.75rem] px-0 p-[2rem] lg:px-[2rem] bg-transparent md:bg-[#ffffff08] reg-box"
+        class="w-[100%] lg:w-[55%] rounded-[.75rem] px-0 p-[2rem] lg:px-[2rem] bg-transparent md:bg-[#ffffff08] md:shadow-3xl reg-box"
         style="
           background-image: url(/src/Images/star.png),
             url(/src/Images/star_bright.png);
@@ -165,7 +163,7 @@
           ></textarea>
           <button
             type="submit"
-            class="gradient font-[400] leading-[19.5px] py-[12px] rounded-[5px] mt-[10px] self-center px-[18px] submit-btn"
+            class="bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe34b9] font-[400] leading-[19.5px] py-[12px] rounded-[5px] mt-[10px] self-center px-[18px] transition-all duration-300 ease-linear hover:scale-[1.1] submit-btn"
           >
             Submit
           </button>

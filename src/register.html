@@ -10,11 +10,7 @@
       src="https://kit.fontawesome.com/2bfe15d79d.js"
       crossorigin="anonymous"
     ></script>
-    <!-- google font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;800&display=swap"
-      rel="stylesheet"
-    />
+
     <script src="./app.js" defer></script>
   </head>
   <body
@@ -56,7 +52,7 @@
       <div class="hidden w-[20%] lg:flex justify-end">
         <a
           href="#"
-          class="border-grad rounded-[4px] w-[60%] py-[10px] text-center"
+          class="border-grad rounded-[4px] w-[60%] py-[10px] text-center bg-[#150E28] relative"
         >
           Register
         </a>
@@ -80,7 +76,7 @@
       </div>
 
       <div
-        class="w-[100%] lg:w-[55%] rounded-[.75rem] px-[1rem] p-[2rem] md:px-[2rem] bg-transparent md:bg-[#ffffff08] reg-box"
+        class="w-[100%] lg:w-[55%] rounded-[.75rem] px-[1rem] p-[2rem] md:px-[2rem] bg-transparent md:bg-[#ffffff08] md:shadow-3xl reg-box"
         style="
           background-image: url(/src/Images/star.png),
             url(/src/Images/star_bright.png);
@@ -203,7 +199,7 @@
           </div>
 
           <button
-            class="gradient font-[400] leading-[19.5px] py-[12px] rounded-[5px] mt-[10px] self-center px-[18px] md:self-stretch submit-btn"
+            class="bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe34b9] font-[400] leading-[19.5px] py-[12px] rounded-[5px] mt-[10px] self-center px-[18px] md:self-stretch submit-btn"
             type="submit"
           >
             Register Now
@@ -247,7 +243,7 @@
     </div>
 
     <div
-      class="fixed inset-0 h-[100vh] hidden justify-center items-center bg-[#150e28ed] gap-[10px]"
+      class="fixed inset-0 h-[100vh] hidden justify-center items-center bg-[#150e28ed] gap-[10px] animate-spin"
       id="loader"
     >
       <div class="w-[1.2rem] h-[1.2rem] rounded-[50%] bg-[#ffffff]"></div>

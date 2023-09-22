@@ -4,18 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
     <title>getlinked | Home</title>
     <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/2bfe15d79d.js"
       crossorigin="anonymous"
     ></script>
-    <!-- google font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;800&display=swap"
-      rel="stylesheet"
-    />
-
     <script src="/src/app.js" defer></script>
   </head>
   <body class="bg-[#150E28] text-[#FFFFFF] relative z-[100] scroll-pt-[5rem]">
@@ -35,7 +30,9 @@
         <a href="/src/contact.html" class="capitalize">contact</a>
       </nav>
       <a href="/src/register.html" class="hidden w-[20%] lg:flex justify-end">
-        <button class="gradient rounded-[4px] w-[40%] py-[10px]">
+        <button
+          class="rounded-[4px] w-[40%] py-[10px] bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe34b9] transition-all duration-300 ease-linear hover:scale-[1.1]"
+        >
           Register
         </button>
       </a>
@@ -63,7 +60,7 @@
       <div class="mt-[2rem]">
         <a
           href="/src/register.html"
-          class="gradient rounded-[4px] py-[10px] px-[18px] font-[400]"
+          class="bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe34b9] rounded-[4px] py-[10px] px-[18px] font-[400] transition-all duration-300 ease-linear hover:scale-[1.1]"
         >
           Register
         </a>
@@ -81,7 +78,7 @@
     <main class="">
       <!-- HERO -->
       <section
-        class="border-solid border-[#ffffff2E] border-b-[0.01px] px-[2rem] lg:px-[3rem] pt-[3rem]"
+        class="border-solid border-[#ffffff2E] border-b-[0.01px] px-[2rem] lg:px-[3rem] pt-[3rem] hero"
       >
         <h3
           class="text-center lg:text-end font-[700] text-[16px] leading-[19px] md:text-[30px] md:leading-[43.88px]"
@@ -106,10 +103,15 @@
               Participate in getLinked tech hackathon 2023 stand a chance to win
               a big prize
             </p>
-            <div class="mt-[2rem]">
-              <button class="gradient rounded-[4px] px-[22px] py-[10px]">
+            <div
+              class="mt-[2rem] transition-all duration-300 ease-linear hover:scale-[1.1]"
+            >
+              <a
+                href="/src/register.html"
+                class="bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe34b9] rounded-[4px] px-[22px] py-[10px]"
+              >
                 Register
-              </button>
+              </a>
             </div>
 
             <!-- time -->
@@ -180,6 +182,7 @@
       <!-- rules -->
       <section
         class="flex flex-col items-center justify-center gap-[3rem] lg:gap-[2rem] lg:flex-row-reverse border-solid border-[#ffffff2E] border-b-[0.01px] px-[2rem] lg:px-0"
+        id="rule"
       >
         <div class="w-[100%] lg:w-[40%] flex justify-end rule">
           <img src="/src/Images/rules.png" alt="the big idea" />
@@ -206,6 +209,7 @@
       <!-- criteria section -->
       <section
         class="flex flex-col lg:flex-row items-center justify-center gap-[2rem] border-solid border-[#ffffff2E] border-b-[0.01px] py-[3rem] px-[2rem] lg:px-0"
+        id="criteria"
       >
         <div class="w-[100%] lg:w-[40%] judge">
           <img src="/src/Images/criteria.png" alt="the big idea" />
@@ -263,7 +267,9 @@
           </div>
 
           <div class="mt-[2rem]">
-            <button class="gradient rounded-[4px] py-[10px] w-[50%] lg:w-[25%]">
+            <button
+              class="bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe34b9] rounded-[4px] py-[10px] w-[50%] lg:w-[25%] transition-all duration-300 ease-linear hover:scale-[1.1]"
+            >
               Read More
             </button>
           </div>
@@ -403,7 +409,10 @@
       </section>
 
       <!-- prizes -->
-      <section class="pt-[3rem] pb-[4rem] bg-[#100B20] px-[2rem] lg:px-0">
+      <section
+        class="pt-[3rem] pb-[4rem] bg-[#100B20] px-[2rem] lg:px-0"
+        id="prizes"
+      >
         <!-- header -->
         <div class="lg:pl-[55%] text-center lg:text-start">
           <h3 class="leading-[43px] text-[32px] font-[700] capitalize">
@@ -434,7 +443,8 @@
               <img
                 src="/src/Images/silver_medal.png"
                 alt="silver medal"
-                class="absolute w-[80%] -top-[15%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+                class="absolute w-[80%] -top-[50%] left-[12%] -translate-x-[50%] -translate-y-[50%]"
+                id="silver"
               />
               <h2
                 class="text-[12px] md:text-[2.25rem] font-[700] leading-[26px] md:leading-[2.9rem]"
@@ -453,13 +463,12 @@
             <div
               class="rounded-[.5rem] border-solid border-[1px] border-[#903AFF] bg-[#903AFF1F] flex flex-col p-[10px] relative pt-[2rem] pb-[1rem] md:pt-[5rem] text-center mt-[1.5rem]"
             >
-              <div>
-                <img
-                  src="/src/Images/gold_medal.png"
-                  alt="silver medal"
-                  class="absolute -top-[15%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
-                />
-              </div>
+              <img
+                src="/src/Images/gold_medal.png"
+                alt="silver medal"
+                class="absolute -top-[60%] left-[0%] -translate-x-[50%] -translate-y-[50%]"
+                id="silver"
+              />
               <h2
                 class="text-[12px] md:text-[2.25rem] font-[700] leading-[26px] md:leading-[2.9rem]"
               >
@@ -480,7 +489,8 @@
               <img
                 src="/src/Images/bronze_medal.png"
                 alt="silver medal"
-                class="absolute w-[80%] -top-[15%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+                class="absolute w-[80%] -top-[50%] left-[12%] -translate-x-[50%] -translate-y-[50%]"
+                id="silver"
               />
               <h2
                 class="text-[12px] lg:text-[2.25rem] font-[700] leading-[26px] lg:leading-[2.9rem]"
@@ -501,6 +511,7 @@
       <!-- partners -->
       <section
         class="flex flex-col gap-[4rem] justify-center items-center border-solid border-[#ffffff2E] border-b-[0.01px] py-[3rem] px-[2rem] lg:px-0"
+        id="partners"
       >
         <!-- header  -->
         <div class="text-center md:w-[70%] lg:w-[35%]">
@@ -523,7 +534,10 @@
       </section>
 
       <!-- privacy policy -->
-      <section class="flex flex-col items-center py-[3rem] px-[2rem] lg:px-0">
+      <section
+        class="flex flex-col items-center py-[3rem] px-[2rem] lg:px-0"
+        id="privacy"
+      >
         <!-- header  -->
         <div class="lg:w-[80%] text-center lg:text-start">
           <h3
@@ -588,7 +602,9 @@
               </ul>
             </div>
             <div class="self-center mt-[16px]">
-              <button class="gradient rounded-[4px] py-[10px] px-[18px]">
+              <button
+                class="bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe34b9] rounded-[4px] py-[10px] px-[18px] transition-all duration-300 ease-linear hover:scale-[1.1]"
+              >
                 Read More
               </button>
             </div>
@@ -637,10 +653,19 @@
 
             <div class="flex items-center gap-[10px] mt-[13px]">
               <p class="text-[#D434FE]">Follow us</p>
-              <i class="fa fa-instagram text-[#ffffff]" aria-hidden="true"></i>
+              <i
+                class="fa fa-instagram text-[#ffffff] text-[20px]"
+                aria-hidden="true"
+              ></i>
               <img src="/src/Images/x.svg" alt="twitter" />
-              <i class="fa fa-facebook text-[#ffffff]" aria-hidden="true"></i>
-              <i class="fa fa-linkedin text-[#ffffff]" aria-hidden="true"></i>
+              <i
+                class="fa fa-facebook text-[#ffffff] text-[20px]"
+                aria-hidden="true"
+              ></i>
+              <i
+                class="fa fa-linkedin text-[#ffffff] text-[20px]"
+                aria-hidden="true"
+              ></i>
             </div>
           </div>
         </div>
