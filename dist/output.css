@@ -1569,6 +1569,14 @@ body {
     font-size: 24px;
   }
 
+  .md\:text-\[70px\]{
+    font-size: 70px;
+  }
+
+  .md\:text-\[30px\]{
+    font-size: 30px;
+  }
+
   .md\:leading-\[43\.88px\]{
     line-height: 43.88px;
   }
