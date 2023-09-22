@@ -174,6 +174,8 @@ async function postInfo() {
       category: category.value,
       privacy_poclicy_accepted: check.checked ? true : false,
     };
+    document.querySelector('#loader').classList.add('active');
+
     const data = await fetch(
       'https://backend.getlinked.ai/hackathon/registration',
       {
@@ -184,10 +186,11 @@ async function postInfo() {
         },
       }
     );
-
     if (!data.ok) {
       throw new Error('User EXist');
     }
+
+    document.querySelector('#loader').classList.remove('active');
     congratulationsMsg.classList.add('open');
 
     const result = await data.json();
@@ -199,6 +202,8 @@ async function postInfo() {
 
 // create error message for existing user
 function errorMsg(err) {
+  document.querySelector('#loader').classList.remove('active');
+
   const errElement = document.createElement('p');
   errElement.textContent = err;
   errElement.style.color = '#FF26B9';
