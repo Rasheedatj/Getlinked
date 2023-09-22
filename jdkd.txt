@@ -2,8 +2,8 @@ hero
 
   style="
           background: url(/src/Images/Creative-bulb.png),
-            url(./src/Images/chain.png), url(/src/Images/starbright.svg),
-            url(./src/Images/star.svg), url(./src/Images/star.svg),
+            url(./src/Images/chain.png), url(/src/Images/star_bright.png),
+            url(./src/Images/star.png), url(./src/Images/star.png),
             url(/src/Images/curve.svg);
           background-repeat: no-repeat;
           background-position: top 20% left 40%, right 52% top 45%,
@@ -16,7 +16,7 @@ hero
 
   style="
           background: url(/src/Images/arrow.png),
-            url(./src/Images/star_purple.svg), url(/src/Images/star_purple.svg);
+            url(./src/Images/star_purple.png), url(/src/Images/star_purple.png);
           background-repeat: no-repeat;
           background-position: bottom 10% left 45%, right 13% top 35%,
             top 35% left 5%;
@@ -24,16 +24,16 @@ hero
 
         3
          style="
-          background: url(/src/Images/starbright.svg),
-            url(./src/Images/star.svg);
+          background: url(/src/Images/star_bright.png),
+            url(./src/Images/star.png);
           background-repeat: no-repeat;
           background-position: bottom 30% left 50%, left 30% top 25%;
         "
 
         criteria
          style="
-          background: url(/src/Images/starbright.svg),
-            url(./src/Images/star.svg), url(./src/Images/star_purple.svg),
+          background: url(/src/Images/star_bright.png),
+            url(./src/Images/star.png), url(./src/Images/star_purple.png),
             url(/src/Images/Ellipse.svg);
           background-repeat: no-repeat;
           background-position: bottom 10% left 47%, left 30% bottom 50%,
@@ -45,9 +45,9 @@ hero
           background: url(/src/Images/small\ question.svg),
             url(./src/Images/bigQuestion.svg),
             url(/src/Images/small\ question.svg),
-            url(./src/Images/star_purple.svg), url(./src/Images/star_purple.svg),
-            url(/src/Images/star_purple.svg), url(/src/Images/star.svg),
-            url(/src/Images/starbright.svg);
+            url(./src/Images/star_purple.png), url(./src/Images/star_purple.png),
+            url(/src/Images/star_purple.png), url(/src/Images/star.png),
+            url(/src/Images/star_bright.png);
           background-repeat: no-repeat;
           background-position: top 8% right 42%, right 33% top 3%,
             top 8% right 25%, right 30% top 8%, right 42% top 25%,
@@ -57,9 +57,9 @@ hero
         prizes
 
           style="
-          background: url(/src/Images/star_purple.svg),
-            url(/src/Images/starbright.svg), url(/src/Images/starbright.svg),
-            url(/src/Images/star.svg), url(/src/Images/starbright.svg);
+          background: url(/src/Images/star_purple.png),
+            url(/src/Images/star_bright.png), url(/src/Images/star_bright.png),
+            url(/src/Images/star.png), url(/src/Images/star_bright.png);
           background-repeat: no-repeat;
           background-position: top 10% left 20%, top 30% right 48%,
             top 47% right 12%, bottom 10% right 22%, bottom 5% left 20%;
@@ -68,10 +68,10 @@ hero
         privacy
 
           style="
-          background: url(/src/Images/guard.svg), url(/src/Images/star.svg),
-            url(/src/Images/star.svg), url(/src/Images/star_purple.svg),
-            url(/src/Images/star_purple.svg), url(/src/Images/star_purple.svg),
-            url(/src/Images/starbright.svg);
+          background: url(/src/Images/guard.svg), url(/src/Images/star.png),
+            url(/src/Images/star.png), url(/src/Images/star_purple.png),
+            url(/src/Images/star_purple.png), url(/src/Images/star_purple.png),
+            url(/src/Images/star_bright.png);
           background-repeat: no-repeat;
           background-position: top 15% right 10%, top 3% left 33%,
             right 5% bottom 15%, left 50% top 20%, left 4% bottom 30%,
@@ -81,8 +81,8 @@ hero
         partners
 
          style="
-          background: url(/src/Images/starbright.svg),
-            url(/src/Images/star_purple.svg), url(/src/Images/star_purple.svg);
+          background: url(/src/Images/star_bright.png),
+            url(/src/Images/star_purple.png), url(/src/Images/star_purple.png);
           background-repeat: no-repeat;
           background-position: bottom 15% right 45%, top 24% left 13%,
             right 45% top 40%;
