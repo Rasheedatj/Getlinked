@@ -27,7 +27,6 @@ const contactForm = document.querySelector('.contact');
 
 const animateElement = [trophy, cloud, padlock, judge, rule, idea];
 let countdownInterval;
-
 function openMenu() {
   menu.classList.add('open');
 }
@@ -65,6 +64,7 @@ function updateCountdown() {
   requestAnimationFrame(updateCountdown);
 }
 
+// Faq open and close
 let accordion = document.querySelectorAll('.faq > div');
 
 accordion.forEach((question) => {
@@ -79,20 +79,28 @@ accordion.forEach((question) => {
   });
 });
 
-const animations = [
-  {
-    transform: 'translateY(0)',
-  },
-  {
-    transform: ' translateY(-20px)',
-  },
-];
+// translating animations for flex images on home page
+function animateFunc() {
+  const animations = [
+    {
+      transform: 'translateY(0)',
+    },
+    {
+      transform: ' translateY(-20px)',
+    },
+  ];
 
-const animateOpts = {
-  iterations: Infinity,
-  duration: 2000,
-  direction: 'alternate',
-};
+  const animateOpts = {
+    iterations: Infinity,
+    duration: 2000,
+    direction: 'alternate',
+  };
+
+  animateElement.forEach((element) => {
+    const animation = element.animate(animations, animateOpts);
+    animation.play();
+  });
+}
 
 function verifyForm(e) {
   e.preventDefault();
@@ -119,13 +127,14 @@ function verifyForm(e) {
   // All conditions passed, show congratulations message
   else {
     postInfo();
-    congratulationsMsg.classList.add('open');
     errorMsg.classList.remove('active');
   }
 
   closeErrorMsg.addEventListener('click', () =>
     errorMsg.classList.remove('active')
   );
+
+  setTimeout(() => errorMsg.classList.remove('active'), 5750);
 }
 
 async function getCategory() {
@@ -177,14 +186,27 @@ async function postInfo() {
     );
 
     if (!data.ok) {
-      throw new Error();
+      throw new Error('User EXist');
     }
+    congratulationsMsg.classList.add('open');
 
     const result = await data.json();
     console.log(result);
   } catch (error) {
-    console.log(error);
+    errorMsg(error);
   }
+}
+
+// create error message for existing user
+function errorMsg(err) {
+  const errElement = document.createElement('p');
+  errElement.textContent = err;
+  errElement.style.color = '#FF26B9';
+  errElement.style.fontStyle = 'italic';
+  errElement.style.fontSize = '12px';
+  document
+    .querySelector('.email-form')
+    .insertAdjacentElement('beforeend', errElement);
 }
 
 async function postContact() {
@@ -222,16 +244,13 @@ function init() {
       requestAnimationFrame(updateCountdown);
       menuBtn.addEventListener('click', openMenu);
       closeBtn.addEventListener('click', closeMenu);
-      animateElement.forEach((element) => {
-        const animation = element.animate(animations, animateOpts);
-        animation.play();
-      });
-
+      animateFunc();
       break;
     case '/src/register.html':
-      registerBack.addEventListener('click', () =>
-        congratulationsMsg.classList.remove('open')
-      );
+      registerBack.addEventListener('click', () => {
+        // congratulationsMsg.classList.remove('open');
+        window.location.reload();
+      });
       getCategory();
       register.addEventListener('submit', verifyForm);
       break;

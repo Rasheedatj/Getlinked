@@ -45,7 +45,12 @@
         <a href="" class="capitalize">timeline</a>
         <a href="" class="capitalize">overview</a>
         <a href="" class="capitalize">FAQs</a>
-        <a href="./contact.html" class="capitalize">contact</a>
+        <a
+          href="./contact.html"
+          class="capitalize bg-clip-text font-[600]"
+          id="contact"
+          >contact</a
+        >
       </nav>
       <div class="hidden w-[20%] lg:flex justify-end">
         <a
@@ -74,7 +79,7 @@
       </div>
 
       <div
-        class="w-[100%] lg:w-[55%] rounded-[.75rem] p-[2rem] bg-transparent md:bg-[#ffffff08] reg-box"
+        class="w-[100%] lg:w-[55%] rounded-[.75rem] px-[1rem] p-[2rem] md:px-[2rem] bg-transparent md:bg-[#ffffff08] reg-box"
         style="
           background-image: url(/src/Images/star.png),
             url(/src/Images/star_bright.png);
@@ -82,7 +87,9 @@
           background-position: top 4% right 20%, bottom 0% right 5%;
         "
       >
-        <h1 class="text-[32px] leading-[39.36px] text-[#D434FE] font-[600]">
+        <h1
+          class="hidden lg:block text-[32px] leading-[39.36px] text-[#D434FE] font-[600]"
+        >
           Register
         </h1>
 
@@ -92,17 +99,13 @@
             Be part of the movement
           </h5>
           <h1
-            class="uppercase text-[20px] md:text-[24px] leading-[29.26px] font-[400] pt-[1rem]"
+            class="uppercase text-[20px] md:text-[24px] leading-[29.26px] font-[400] pt-[.4rem] md:pt-[1rem]"
           >
             Create your account
           </h1>
         </div>
 
-        <form
-          action="https://backend.getlinked.ai/hackathon/registration"
-          method="post"
-          class="mt-[2rem] flex flex-col register-form"
-        >
+        <form class="mt-[1rem] md:mt-[2rem] flex flex-col register-form">
           <div>
             <div
               class="flex flex-col lg:flex-row lg:items-center gap-[1rem] mt-[1.2rem]"
@@ -130,7 +133,9 @@
             <div
               class="flex flex-col lg:flex-row lg:items-center gap-[1rem] mt-[1.2rem]"
             >
-              <div class="form-input flex flex-col gap-[10px] lg:w-[50%]">
+              <div
+                class="form-input flex flex-col gap-[10px] lg:w-[50%] email-form"
+              >
                 <label for="Email">Email</label>
                 <input
                   type="email"
@@ -207,7 +212,7 @@
     </main>
 
     <section
-      class="hidden fixed inset-0 h-[100vh] justify-center items-center msg"
+      class="hidden fixed inset-0 h-[100vh] justify-center items-center bg-[#150e28ed] msg"
     >
       <div
         class="text-center flex flex-col items-center pb-[3rem] px-[2rem] w-[90%] lg:w-[50%] border-[1px] border-solid border-[#D434FE]"
@@ -234,7 +239,7 @@
     </section>
     <!-- error message -->
     <div
-      class="fixed right-[5%] top-[5%] p-[1rem] rounded-[5px] items-center gap-[20px] bg-[#903AFF] hidden error"
+      class="fixed right-[5%] top-[5%] p-[1rem] rounded-[5px] items-center gap-[20px] bg-[#903AFF] flex error translate-x-[140%] transition-transform duration-700 ease-linear opacity-70"
     >
       <p>Please, comepletely fill out the form</p>
       <i class="fa fa-times close-err cursor-pointer"></i>

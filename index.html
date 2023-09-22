@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +18,7 @@
 
     <script src="/src/app.js" defer></script>
   </head>
-  <body class="bg-[#150E28] text-[#FFFFFF] relative z-[100]">
+  <body class="bg-[#150E28] text-[#FFFFFF] relative z-[100] scroll-pt-[5rem]">
     <header
       class="flex items-center justify-between pt-[2rem] pb-[1.5rem] text-[#FFFFFF] border-solid border-[#ffffff2E] border-b-[0.01px] px-[3rem]"
     >
@@ -30,8 +30,8 @@
       </a>
       <nav class="hidden lg:flex items-center gap-[3rem] w-[40%] justify-end">
         <a href="" class="capitalize">timeline</a>
-        <a href="" class="capitalize">overview</a>
-        <a href="" class="capitalize">FAQs</a>
+        <a href="#overview" class="capitalize">overview</a>
+        <a href="#FAQ" class="capitalize">FAQs</a>
         <a href="/src/contact.html" class="capitalize">contact</a>
       </nav>
       <a href="/src/register.html" class="hidden w-[20%] lg:flex justify-end">
@@ -59,14 +59,17 @@
         <a href="" class="capitalize">FAQs</a>
         <a href="/src/contact.html" class="capitalize">contact</a>
       </nav>
-      <a
-        href="/src/register.html"
-        class="gradient rounded-[4px] py-[10px] px-[18px] mt-[2rem]"
-      >
-        Register
-      </a>
+
+      <div class="mt-[2rem]">
+        <a
+          href="/src/register.html"
+          class="gradient rounded-[4px] py-[10px] px-[18px] font-[400]"
+        >
+          Register
+        </a>
+      </div>
       <div
-        class="absolute top-[2rem] right-[3rem] w-[3rem] h-[3rem] rounded-[50%] grid place-items-center border-[1px] border-solid border-img"
+        class="absolute top-[2rem] right-[3rem] w-[2rem] h-[2rem] rounded-[50%] grid place-items-center bg-[#150e28] border-img"
       >
         <i
           class="fa fa-times text-[18px] text-[#ffffff] close"
@@ -146,9 +149,10 @@
         </section>
       </section>
 
-      <!-- section 2 -->
+      <!-- Introduction section  -->
       <section
         class="flex flex-col lg:flex-row items-center justify-center gap-[3rem] lg:gap-[2rem] border-solid border-[#ffffff2E] border-b-[0.01px] px-[2rem] lg:px-0 py-[3rem]"
+        id="overview"
       >
         <div class="w-[100%] flex justify-center lg:block lg:w-[40%] idea-img">
           <img src="/src/Images/The big idea.png" alt="the big idea" />
@@ -269,6 +273,7 @@
       <!-- FAQ section -->
       <section
         class="flex flex-col-reverse lg:flex-row-reverse items-center justify-center gap-[2rem] pb-[3rem] pt-[7rem] border-solid border-[#ffffff2E] border-b-[0.01px] px-[2rem] lg:px-0"
+        id="FAQ"
       >
         <div class="w-[100%] lg:w-[40%] faq-img">
           <img src="/src/Images/faq.png" alt="faq" />
@@ -619,11 +624,11 @@
         <div class="lg:w-[30%] lg:flex justify-end">
           <div>
             <h3 class="text-[#D434FE] text-[14px]">Useful link</h3>
-            <ul class="flex flex-col gap-[10px] mt-[10px]">
-              <li><a href="">overview</a></li>
+            <ul class="flex flex-col gap-[10px] mt-[10px] font-[400]">
+              <li><a href="#overview">overview</a></li>
               <li><a href="">Timeline</a></li>
-              <li><a href="">FAQs</a></li>
-              <li><a href="">Register</a></li>
+              <li><a href="#FAQ">FAQs</a></li>
+              <li><a href="/src/register.html">Register</a></li>
             </ul>
 
             <div class="flex items-center gap-[10px] mt-[13px]">

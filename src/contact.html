@@ -36,16 +36,19 @@
       >
         get<span class="text-[#D434FE]">linked</span>
       </a>
-      <div
-        class="lg:hidden text-[18px] font-[700] leading-normal border-img border-solid border-[1px] w-[3rem] h-[3rem] grid place-items-center"
+      <a
+        href="/index.html"
+        class="lg:hidden font-[700] leading-normal border-img rounded-[50%] relative w-[2rem] h-[2rem] grid place-items-center bg-[#150e28]"
       >
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-      </div>
+      </a>
       <nav class="hidden lg:flex items-center gap-[3rem] w-[40%] justify-end">
         <a href="" class="capitalize">timeline</a>
         <a href="" class="capitalize">overview</a>
         <a href="" class="capitalize">FAQs</a>
-        <a href="" class="capitalize">contact</a>
+        <a href="" class="capitalize bg-clip-text font-[600]" id="contact"
+          >contact</a
+        >
       </nav>
       <div class="hidden w-[20%] lg:flex justify-end">
         <a
@@ -133,11 +136,7 @@
           to our event
         </p>
 
-        <form
-          action="https://backend.getlinked.ai/hackathon/contact-form"
-          method="post"
-          class="mt-[2rem] flex flex-col gap-[1rem] text-[#ffffff] contact"
-        >
+        <form class="mt-[2rem] flex flex-col gap-[1rem] text-[#ffffff] contact">
           <div class="form-input flex flex-col gap-[10px]">
             <input
               type="name"
@@ -161,10 +160,9 @@
             id="msg"
             cols="30"
             rows="10"
+            placeholder="Message"
             class="border-[1px] border-solid border-[#ffffff] px-[1rem] py-[10px] font-400 rounded-[5px] bg-transparent outline-none text-[14px]"
-          >
-Message</textarea
-          >
+          ></textarea>
           <button
             type="submit"
             class="gradient font-[400] leading-[19.5px] py-[12px] rounded-[5px] mt-[10px] self-center px-[18px] submit-btn"
