@@ -98,7 +98,11 @@
           </h1>
         </div>
 
-        <form action="" method="post" class="mt-[2rem] flex flex-col">
+        <form
+          action="https://backend.getlinked.ai/hackathon/registration"
+          method="post"
+          class="mt-[2rem] flex flex-col register-form"
+        >
           <div>
             <div
               class="flex flex-col lg:flex-row lg:items-center gap-[1rem] mt-[1.2rem]"
@@ -154,30 +158,22 @@
                 <select
                   name="category"
                   id="category"
-                  class="border-[1px] border-solid border-[#ffffff] px-[1rem] py-[10px] rounded-[5px] text-[#FFFFFF40] bg-transparent outline-none text-[14px]"
+                  class="border-[1px] border-solid border-[#ffffff] px-[1rem] py-[10px] rounded-[5px] bg-transparent outline-none text-[14px]"
                 >
-                  <option disabled selected class="text-[#ffffff] font-[600]">
+                  <option disabled selected class="font-[600] text-[#ffffff]">
                     Select your category
                   </option>
-                  <option value="developer">developer</option>
                 </select>
               </div>
 
               <div class="form-input flex flex-col gap-[10px] lg:w-[50%]">
                 <label for="phone">Group Size</label>
-                <select
-                  name="size"
+                <input
+                  type="number"
                   id="size"
-                  class="border-[1px] border-solid border-[#ffffff] px-[1rem] py-[10px] rounded-[5px] text-[#FFFFFF40] bg-transparent outline-none text-[14px]"
-                >
-                  <option disabled selected class="text-[#ffffff] font-[600]">
-                    Select
-                  </option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
+                  name="size"
+                  class="border-[1px] border-solid border-[#ffffff] px-[1rem] py-[10px] rounded-[5px] bg-transparent outline-none text-[14px]"
+                />
               </div>
             </div>
           </div>
@@ -224,7 +220,7 @@
           you have successfully Registered!
         </h3>
         <p
-          class="text-[14px] leading-[25px] w-[88%] md:w-[50%] lg:w-[40%] pt-[1rem]"
+          class="text-[14px] leading-[25px] w-[88%] md:w-[50%] lg:w-[50%] pt-[1rem]"
         >
           Yes, it was easy and you did it! check your mail box for next step
         </p>

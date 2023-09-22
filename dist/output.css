@@ -639,10 +639,6 @@ video {
   top: 15%;
 }
 
-.top-\[10\%\]{
-  top: 10%;
-}
-
 .top-\[5\%\]{
   top: 5%;
 }
@@ -932,18 +928,14 @@ video {
   border-color: rgb(212 52 254 / var(--tw-border-opacity));
 }
 
-.border-\[\#ffffff\]{
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-\[\#903AFF1F\]{
-  border-color: #903AFF1F;
-}
-
 .border-\[\#903AFF\]{
   --tw-border-opacity: 1;
   border-color: rgb(144 58 255 / var(--tw-border-opacity));
+}
+
+.border-\[\#ffffff\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-\[\#150E28\]{
@@ -965,6 +957,10 @@ video {
   background-color: #D434FE1E;
 }
 
+.bg-\[\#903AFF1F\]{
+  background-color: #903AFF1F;
+}
+
 .bg-transparent{
   background-color: transparent;
 }
@@ -972,10 +968,6 @@ video {
 .bg-\[\#903AFF\]{
   --tw-bg-opacity: 1;
   background-color: rgb(144 58 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#903AFF1F\]{
-  background-color: #903AFF1F;
 }
 
 .p-\[10px\]{
@@ -1094,6 +1086,10 @@ video {
   padding-bottom: 4rem;
 }
 
+.pb-\[1rem\]{
+  padding-bottom: 1rem;
+}
+
 .pb-\[15px\]{
   padding-bottom: 15px;
 }
@@ -1104,10 +1100,6 @@ video {
 
 .pt-\[1rem\]{
   padding-top: 1rem;
-}
-
-.pb-\[1rem\]{
-  padding-bottom: 1rem;
 }
 
 .text-center{
@@ -1335,6 +1327,11 @@ video {
   color: #FFFFFF40;
 }
 
+.text-\[red\]{
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
 .accent-\[\#903AFF\]{
   accent-color: #903AFF;
 }
@@ -1365,10 +1362,6 @@ video {
 
 .ease-linear{
   transition-timing-function: linear;
-}
-
-.ease-in-out{
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -1461,6 +1454,20 @@ body {
           animation: cookieSlide 750ms ease-in-out;
 }
 
+/* select {
+  appearance: none; 
+  position: relative;
+}
+
+select::after {
+  content: 'lo';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+} */
+
 @-webkit-keyframes cookieSlide {
   0% {
     transform: translateX(100%);
@@ -1537,8 +1544,12 @@ body {
     font-size: 36px;
   }
 
-  .md\:text-\[80px\]{
-    font-size: 80px;
+  .md\:text-\[30px\]{
+    font-size: 30px;
+  }
+
+  .md\:text-\[70px\]{
+    font-size: 70px;
   }
 
   .md\:text-\[20px\]{
@@ -1571,14 +1582,6 @@ body {
 
   .md\:text-\[24px\]{
     font-size: 24px;
-  }
-
-  .md\:text-\[70px\]{
-    font-size: 70px;
-  }
-
-  .md\:text-\[30px\]{
-    font-size: 30px;
   }
 
   .md\:leading-\[43\.88px\]{

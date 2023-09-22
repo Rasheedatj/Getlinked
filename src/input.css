@@ -84,6 +84,20 @@ body {
   animation: cookieSlide 750ms ease-in-out;
 }
 
+/* select {
+  appearance: none; 
+  position: relative;
+}
+
+select::after {
+  content: 'lo';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+} */
+
 @keyframes cookieSlide {
   0% {
     transform: translateX(100%);

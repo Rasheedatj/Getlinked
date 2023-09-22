@@ -10,12 +10,20 @@ const judge = document.querySelector('.judge');
 const rule = document.querySelector('.rule');
 const idea = document.querySelector('.idea-img');
 const registerBtn = document.querySelector('.submit-btn');
+const register = document.querySelector('.register-form');
 const congratulationsMsg = document.querySelector('.msg');
 const registerBack = document.querySelector('.back');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const topicInput = document.getElementById('topic');
+const phoneNumer = document.getElementById('phone');
 const check = document.querySelector('.check');
+const category = document.getElementById('category');
+const grpSize = document.getElementById('size');
+const contactName = document.querySelector('.contact .name');
+const contactemail = document.querySelector('.contact .email');
+const contactMessage = document.querySelector('.contact textarea');
+const contactForm = document.querySelector('.contact');
 
 const animateElement = [trophy, cloud, padlock, judge, rule, idea];
 let countdownInterval;
@@ -92,7 +100,6 @@ function verifyForm(e) {
   const isValidEmail = emailRegex.test(emailInput.value);
   const errorMsg = document.querySelector('.error');
   const closeErrorMsg = document.querySelector('.close-err');
-  console.log(emailInput.value);
   // Check if the email is valid
   if (!isValidEmail) {
     errorMsg.classList.add('active');
@@ -111,6 +118,7 @@ function verifyForm(e) {
   }
   // All conditions passed, show congratulations message
   else {
+    postInfo();
     congratulationsMsg.classList.add('open');
     errorMsg.classList.remove('active');
   }
@@ -118,6 +126,94 @@ function verifyForm(e) {
   closeErrorMsg.addEventListener('click', () =>
     errorMsg.classList.remove('active')
   );
+}
+
+async function getCategory() {
+  try {
+    const data = await fetch(
+      'https://backend.getlinked.ai/hackathon/categories-list',
+      {
+        headers: { 'Content-Type': 'application/json' },
+      }
+    );
+    const result = await data.json();
+
+    if (!data.ok) {
+      throw new Error('error');
+    }
+
+    result.forEach((result) => {
+      const option = document.createElement('option');
+      option.textContent = result.name;
+      option.value = result.id;
+      option.style.background = 'black';
+      document.getElementById('category').appendChild(option);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function postInfo() {
+  try {
+    const info = {
+      email: emailInput.value,
+      phone_number: phoneNumer.value,
+      team_name: nameInput.value,
+      group_size: grpSize.value,
+      project_topic: topicInput.value,
+      category: category.value,
+      privacy_poclicy_accepted: check.checked ? true : false,
+    };
+    const data = await fetch(
+      'https://backend.getlinked.ai/hackathon/registration',
+      {
+        method: 'POST',
+        body: JSON.stringify(info),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+
+    if (!data.ok) {
+      throw new Error();
+    }
+
+    const result = await data.json();
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function postContact() {
+  try {
+    const info = {
+      email: contactemail.value,
+      phone_number: '0903322445533',
+      first_name: contactName.value,
+      message: contactMessage.value,
+    };
+    const data = await fetch(
+      ' https://backend.getlinked.ai/hackathon/contact-form',
+      {
+        method: 'POST',
+        body: JSON.stringify(info),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    if (!data.ok) {
+      throw new Error('error');
+    }
+
+    const result = await data.json();
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function init() {
@@ -131,12 +227,19 @@ function init() {
         animation.play();
       });
 
-      console.log('home');
       break;
     case '/src/register.html':
-      registerBtn.addEventListener('click', verifyForm);
-      registerBack.addEventListener('click', () => window.location.reload());
-      console.log('Register');
+      registerBack.addEventListener('click', () =>
+        congratulationsMsg.classList.remove('open')
+      );
+      getCategory();
+      register.addEventListener('submit', verifyForm);
+      break;
+    case '/src/contact.html':
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        postContact();
+      });
       break;
   }
 }
