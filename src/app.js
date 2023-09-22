@@ -245,6 +245,7 @@ async function postContact() {
 
 function init() {
   switch (global) {
+    case '/':
     case '/index.html':
       requestAnimationFrame(updateCountdown);
       menuBtn.addEventListener('click', openMenu);
