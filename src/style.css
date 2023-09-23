@@ -24,16 +24,12 @@
   position: relative;
 }
 
-.glass {
-  overflow: hidden;
-}
-
-.glass::after {
+.hero::after {
   content: url(/src/Images/bubble.png);
   position: absolute;
 
-  top: -7%;
-  right: -10%;
+  top: 10%;
+  right: 0%;
 }
 
 #overview {
