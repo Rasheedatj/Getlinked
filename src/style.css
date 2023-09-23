@@ -6,7 +6,23 @@
   background-repeat: no-repeat;
   background-position: top 20% left 40%, left 42% top 48%, right 52% top 48%,
     top 15% left 5%, right 40% top 20%, left 40% bottom 35%, top 13% right 3%;
+  position: relative;
 }
+
+.hero::after {
+  content: url(/src/Images/bubble.png);
+  position: absolute;
+  top: 10%;
+  right: 0%;
+  background: url(/src/Images/bubble.png), 105.862% 104.281% no-repeat;
+  background-blend-mode: hard-light;
+}
+/* .hero::after {
+  content: url(/src/Images/bubble.png);
+  position: absolute;
+  top: 50%;
+  right: 20%;
+} */
 
 #overview {
   background: url(/src/Images/arrow.png), url(/src/Images/star_purple.png),
