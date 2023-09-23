@@ -783,8 +783,8 @@ video {
   width: 60%;
 }
 
-.w-\[400px\]{
-  width: 400px;
+.w-\[100px\]{
+  width: 100px;
 }
 
 .w-\[88\%\]{
@@ -793,10 +793,6 @@ video {
 
 .w-\[1\.2rem\]{
   width: 1.2rem;
-}
-
-.w-\[100px\]{
-  width: 100px;
 }
 
 .-translate-x-\[100\%\]{
@@ -916,12 +912,12 @@ video {
   gap: 10px;
 }
 
-.gap-\[20px\]{
-  gap: 20px;
-}
-
 .gap-\[3px\]{
   gap: 3px;
+}
+
+.gap-\[20px\]{
+  gap: 20px;
 }
 
 .self-end{
