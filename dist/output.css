@@ -2031,6 +2031,10 @@ body {
     padding-top: 3rem;
   }
 
+  .lg\:pt-\[7rem\]{
+    padding-top: 7rem;
+  }
+
   .lg\:text-right{
     text-align: right;
   }
