@@ -1,9 +1,12 @@
-/* .home {
-  background-image: url(/src/Images/Purple-Lens-Flare-PNG.png);
+.home {
+  background-image: url(/src/Images/Purple-Lens-Flare-PNG.png),
+    url(/src/Images/footer_purple.png), url(/src/Images/footer_purple.png),
+    url(/src/Images/footer_purple.png);
   background-repeat: no-repeat;
-  background-position: top -52px left -258px;
+  background-position: top 19.4% left 120%, bottom 3% left 0, bottom 20% left 0,
+    left 0 top 30%;
   background-blend-mode: hard-light;
-} */
+}
 
 .hero {
   background-image: url(/src/Images/Creative-bulb.png),
