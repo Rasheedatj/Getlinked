@@ -653,6 +653,10 @@ video {
   z-index: 50;
 }
 
+.-z-50{
+  z-index: -50;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1619,7 +1623,7 @@ body {
   content: '';
   position: absolute;
   background-color: #d434fe;
-  left: 50.4%;
+  left: 51%;
   width: 0.25rem;
   height: 100%;
   z-index: -1;

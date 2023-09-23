@@ -9,12 +9,18 @@
   position: relative;
 }
 
-.hero::after {
+.glass {
+  overflow: hidden;
+}
+
+.glass::after {
   content: url(/src/Images/bubble.png);
   position: absolute;
-  top: 11%;
+
+  top: -7%;
   right: 0%;
-  background: url(/src/Images/bubble.png), 105.862% 104.281% no-repeat;
+
+  /* background: url(/src/Images/bubble.png), 105.862% 104.281% no-repeat; */
   background-blend-mode: hard-light;
 }
 
@@ -109,12 +115,8 @@ footer {
 }
 
 @media screen and (max-width: 950px) {
-  .hero::after {
-    content: url(/src/Images/bubble.png);
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    display: none;
+  .glass::after {
+    content: '';
   }
 
   .contact {
