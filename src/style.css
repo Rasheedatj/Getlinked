@@ -17,12 +17,6 @@
   background: url(/src/Images/bubble.png), 105.862% 104.281% no-repeat;
   background-blend-mode: hard-light;
 }
-/* .hero::after {
-  content: url(/src/Images/bubble.png);
-  position: absolute;
-  top: 50%;
-  right: 20%;
-} */
 
 #overview {
   background: url(/src/Images/arrow.png), url(/src/Images/star_purple.png),
@@ -90,4 +84,14 @@ footer {
   background-position: top 10% right 30%, top 20% left 5%, right 50% bottom 5%,
     right 5% bottom 20%;
   background-size: 1%;
+}
+
+@media screen and (max-width: 800px) {
+  .hero::after {
+    content: url(/src/Images/bubble.png);
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    display: none;
+  }
 }

@@ -621,16 +621,16 @@ video {
   right: 3rem;
 }
 
-.-top-\[50\%\]{
-  top: -50%;
+.-top-\[45\%\]{
+  top: -45%;
 }
 
 .left-\[12\%\]{
   left: 12%;
 }
 
-.-top-\[60\%\]{
-  top: -60%;
+.-top-\[55\%\]{
+  top: -55%;
 }
 
 .left-\[0\%\]{
@@ -765,10 +765,6 @@ video {
 
 .w-\[2rem\]{
   width: 2rem;
-}
-
-.w-\[65\%\]{
-  width: 65%;
 }
 
 .w-\[80\%\]{
@@ -1173,6 +1169,10 @@ video {
   padding-top: 10px;
 }
 
+.pb-\[5px\]{
+  padding-bottom: 5px;
+}
+
 .pb-\[4rem\]{
   padding-bottom: 4rem;
 }
@@ -1313,20 +1313,20 @@ video {
   line-height: 28px;
 }
 
-.leading-\[43px\]{
-  line-height: 43px;
-}
-
-.leading-\[27\.34px\]{
-  line-height: 27.34px;
-}
-
 .leading-\[20px\]{
   line-height: 20px;
 }
 
 .leading-\[29px\]{
   line-height: 29px;
+}
+
+.leading-\[43px\]{
+  line-height: 43px;
+}
+
+.leading-\[27\.34px\]{
+  line-height: 27.34px;
 }
 
 .leading-\[26px\]{
@@ -1582,6 +1582,7 @@ body {
 
 .number > div {
   counter-increment: number;
+  position: relative;
 }
 
 .number > div::before {
@@ -1595,7 +1596,6 @@ body {
   position: absolute;
   background: linear-gradient(270deg, #903aff 0%, #d434fe 100%);
   left: 48.5%;
-  /* top: 0; */
   font-weight: 700;
 }
 
@@ -1608,6 +1608,28 @@ body {
   height: 100%;
   z-index: -1;
   top: -5%;
+  -webkit-animation: moveline 6s linear forwards;
+          animation: moveline 6s linear forwards;
+}
+
+@-webkit-keyframes moveline {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes moveline {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
+  }
 }
 
 @keyframes spin {
@@ -1650,7 +1672,7 @@ body {
 @media screen and (max-width: 950px) {
   .number > div::before {
     left: -3rem;
-    margin-top: 4rem;
+    bottom: 15%;
     font-size: 12px;
     height: 2rem;
     width: 2rem;
@@ -1671,12 +1693,24 @@ body {
 }
 
 @media (min-width: 768px){
+  .md\:-top-\[50\%\]{
+    top: -50%;
+  }
+
+  .md\:-top-\[60\%\]{
+    top: -60%;
+  }
+
   .md\:mt-\[2rem\]{
     margin-top: 2rem;
   }
 
   .md\:w-\[80\%\]{
     width: 80%;
+  }
+
+  .md\:w-\[65\%\]{
+    width: 65%;
   }
 
   .md\:w-\[90\%\]{
@@ -1693,6 +1727,10 @@ body {
 
   .md\:items-center{
     align-items: center;
+  }
+
+  .md\:gap-\[4rem\]{
+    gap: 4rem;
   }
 
   .md\:gap-\[3rem\]{
@@ -1719,6 +1757,10 @@ body {
   .md\:px-\[2rem\]{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:pb-0{
+    padding-bottom: 0px;
   }
 
   .md\:pt-\[8rem\]{
@@ -1757,6 +1799,10 @@ body {
     font-size: 14px;
   }
 
+  .md\:text-\[16px\]{
+    font-size: 16px;
+  }
+
   .md\:text-\[24px\]{
     font-size: 24px;
   }
@@ -1771,10 +1817,6 @@ body {
 
   .md\:text-\[2rem\]{
     font-size: 2rem;
-  }
-
-  .md\:text-\[16px\]{
-    font-size: 16px;
   }
 
   .md\:leading-\[43\.88px\]{
@@ -1793,6 +1835,10 @@ body {
     line-height: 43px;
   }
 
+  .md\:leading-\[27\.34px\]{
+    line-height: 27.34px;
+  }
+
   .md\:leading-\[29px\]{
     line-height: 29px;
   }
@@ -1807,10 +1853,6 @@ body {
 
   .md\:leading-\[3\.5rem\]{
     line-height: 3.5rem;
-  }
-
-  .md\:leading-\[27\.34px\]{
-    line-height: 27.34px;
   }
 
   .md\:leading-\[50px\]{
