@@ -170,9 +170,14 @@ footer {
     background-size: 3%;
   }
   #privacy {
-    background-position: bottom 15% right 40%, top 3% left 33%,
-      right 5% bottom 15%, left 50% top 20%, left 4% bottom 30%,
-      right 37% bottom 40%, right 40% bottom 25%;
+    background: url(/src/Images/guard.svg), url(/src/Images/star.png),
+      url(/src/Images/star.png), url(/src/Images/star_purple.png),
+      url(/src/Images/star_purple.png), url(/src/Images/star_purple.png),
+      url(/src/Images/star_bright.png);
+    background-repeat: no-repeat;
+    background-position: bottom 12% right 40%, top 1% right 30%,
+      right 5% bottom 15%, right 20% top 15%, left 4% bottom 50%,
+      left 4% bottom 30%, right 40% bottom 25%;
     background-size: 70%, 3%, 3%, 3%, 3%, 3%, 3%;
   }
   #timeline {
