@@ -12,7 +12,7 @@
 .hero::after {
   content: url(/src/Images/bubble.png);
   position: absolute;
-  top: 10%;
+  top: 11%;
   right: 0%;
   background: url(/src/Images/bubble.png), 105.862% 104.281% no-repeat;
   background-blend-mode: hard-light;
@@ -51,6 +51,14 @@
     bottom 3% right 20%;
 }
 
+#timeline {
+  background: url(/src/Images/star.png), url(/src/Images/star_purple.png),
+    url(/src/Images/star_bright.png);
+  background-repeat: no-repeat;
+  background-position: bottom 3% left 5%, top 15% left 13%, right 25% top 45%;
+  background-size: 1%;
+}
+
 #prizes {
   background: url(/src/Images/star_purple.png), url(/src/Images/star_bright.png),
     url(/src/Images/star_bright.png), url(/src/Images/star.png),
@@ -65,6 +73,7 @@
     url(/src/Images/star_purple.png);
   background-repeat: no-repeat;
   background-position: bottom 15% right 45%, top 24% left 13%, right 45% top 40%;
+  background-size: 1%;
 }
 #privacy {
   background: url(/src/Images/guard.svg), url(/src/Images/star.png),
@@ -86,12 +95,89 @@ footer {
   background-size: 1%;
 }
 
-@media screen and (max-width: 800px) {
+.contReg {
+  background-image: url(/src/Images/star.png), url(/src/Images/star_bright.png);
+  background-repeat: no-repeat;
+  background-position: top 4% right 20%, bottom 0% right 5%;
+}
+
+#info {
+  background-image: url(/src/Images/star.png), url(/src/Images/star_purple.png),
+    url(/src/Images/star_purple.png);
+  background-repeat: no-repeat;
+  background-position: bottom 0 left 5%, top 0 left 5%, right 0 bottom 20%;
+}
+
+@media screen and (max-width: 950px) {
   .hero::after {
     content: url(/src/Images/bubble.png);
     position: absolute;
     top: 50%;
     right: 0%;
     display: none;
+  }
+
+  .contact {
+    background-image: none;
+  }
+
+  .contReg {
+    background-position: top 4% right 10%, bottom 20% right 3%;
+    background-size: 4%;
+  }
+
+  #info {
+    background-position: bottom 40% left 5%, right 50% bottom 100%;
+    background-size: 4%;
+  }
+
+  .hero {
+    background-position: top 16% right 20%, right 16% top 26%, right 9% top 26%,
+      top 16% left 30%, top 13% right 10%, right 20% bottom 60%,
+      top 10% right 30%;
+    background-size: 6%, 7%, 7%, 3%, 3%, 3%, 40%;
+  }
+
+  #overview {
+    background-position: bottom 48% left 45%, right 5% bottom 40%,
+      top 5% left 5%;
+    background-size: 6%, 3%, 3%;
+  }
+
+  #rule {
+    background-position: top 30% left 5%, right 5% top 60%;
+    background-size: 3%;
+  }
+
+  #criteria {
+    background-position: bottom 8% right 10%, left 50% top 15%, top 2% left 50%;
+    background-size: 3%;
+  }
+  #FAQ {
+    background-position: bottom 33% left 20%, left 40% bottom 33%,
+      bottom 33% left 60%, left 20% top 5%, left 30% bottom 30%,
+      left 15% bottom 20%, bottom 10% left 5%, bottom 3% right 20%;
+    background-size: 10%, 13%, 10%, 3%, 3%, 3%, 3%, 3%;
+  }
+  #prizes {
+    background-position: top 3% left 5%, bottom 35% left 25%,
+      bottom 30% right 12%, bottom 0% right 32%, bottom 5% left 20%;
+    background-size: 3%;
+  }
+  #partners {
+    background-position: bottom 15% right 30%, top 52% left 20%,
+      right 45% top 40%;
+    background-size: 3%;
+  }
+  #privacy {
+    background-position: bottom 15% right 40%, top 3% left 33%,
+      right 5% bottom 15%, left 50% top 20%, left 4% bottom 30%,
+      right 37% bottom 40%, right 40% bottom 25%;
+    background-size: 70%, 3%, 3%, 3%, 3%, 3%, 3%;
+  }
+  #timeline {
+    background-repeat: no-repeat;
+    background-position: bottom 3% left 5%, top 15% left 13%, right 45% top 50%;
+    background-size: 3%;
   }
 }

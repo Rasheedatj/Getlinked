@@ -133,11 +133,7 @@ function verifyForm(e) {
   else if (topicInput.value.length < 1) {
     errorMsg.classList.add('active');
   }
-  // Check if the checkbox is checked
-  else if (!check.checked) {
-    errorMsg.classList.add('active');
-  }
-  // All conditions passed, show congratulations message
+  // All conditions passed, show congratulations message and post info
   else {
     postInfo();
     errorMsg.classList.remove('active');
@@ -150,6 +146,7 @@ function verifyForm(e) {
   setTimeout(() => errorMsg.classList.remove('active'), 5750);
 }
 
+// get category from api
 async function getCategory() {
   try {
     const data = await fetch(
@@ -176,6 +173,7 @@ async function getCategory() {
   }
 }
 
+// regsitration api
 async function postInfo() {
   try {
     const info = {
@@ -207,16 +205,14 @@ async function postInfo() {
     congratulationsMsg.classList.add('open');
 
     const result = await data.json();
-    console.log(result);
   } catch (error) {
-    errorMsg(error);
+    error.message === 'User EXist' ? errorMsg(error) : '';
   }
 }
 
 // create error message for existing user
 function errorMsg(err) {
   document.querySelector('#loader').classList.remove('active');
-
   const errElement = document.createElement('p');
   errElement.textContent = err;
   errElement.style.color = '#FF26B9';
@@ -251,7 +247,6 @@ async function postContact() {
 
     const result = await data.json();
     window.location.reload();
-    console.log(result);
   } catch (error) {
     console.log(error);
   }
@@ -268,7 +263,6 @@ function init() {
       break;
     case '/src/register.html':
       registerBack.addEventListener('click', () => {
-        // congratulationsMsg.classList.remove('open');
         window.location.reload();
       });
       getCategory();

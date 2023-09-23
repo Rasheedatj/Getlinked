@@ -171,7 +171,7 @@ body {
   }
   .number::after {
     left: -2rem;
-    height: 94%;
+    height: 90%;
     bottom: 0;
     top: 0;
   }

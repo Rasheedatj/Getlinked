@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
-    <title>getlinked | Contact</title>
+    <title>getlinked | Register</title>
     <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/2bfe15d79d.js"
@@ -39,9 +39,9 @@
         Register
       </a>
       <nav class="hidden lg:flex items-center gap-[3rem] w-[40%] justify-end">
-        <a href="" class="capitalize">timeline</a>
-        <a href="" class="capitalize">overview</a>
-        <a href="" class="capitalize">FAQs</a>
+        <a href="/index.html#timeline" class="capitalize">timeline</a>
+        <a href="/index.html#overview" class="capitalize">overview</a>
+        <a href="/index.html#FAQ" class="capitalize">FAQs</a>
         <a
           href="./contact.html"
           class="capitalize bg-clip-text font-[600]"
@@ -208,6 +208,7 @@
       </div>
     </main>
 
+    <!-- congratulations pop up -->
     <section
       class="hidden fixed inset-0 h-[100vh] justify-center items-center bg-[#150e28ed] msg"
     >
@@ -242,13 +243,20 @@
       <i class="fa fa-times close-err cursor-pointer"></i>
     </div>
 
+    <!-- loader -->
     <div
-      class="fixed inset-0 h-[100vh] hidden justify-center items-center bg-[#150e28ed] gap-[10px] animate-spin"
+      class="fixed inset-0 h-[100vh] hidden justify-center items-center bg-[#150e28ed] gap-[10px]"
       id="loader"
     >
-      <div class="w-[1.2rem] h-[1.2rem] rounded-[50%] bg-[#ffffff]"></div>
-      <div class="w-[1.2rem] h-[1.2rem] rounded-[50%] bg-[#ffffff]"></div>
-      <div class="w-[1.2rem] h-[1.2rem] rounded-[50%] bg-[#ffffff]"></div>
+      <div
+        class="w-[1.2rem] h-[1.2rem] rounded-[50%] bg-[#ffffff] animate-spin"
+      ></div>
+      <div
+        class="w-[1.2rem] h-[1.2rem] rounded-[50%] bg-[#ffffff] animate-spin"
+      ></div>
+      <div
+        class="w-[1.2rem] h-[1.2rem] rounded-[50%] bg-[#ffffff] animate-spin"
+      ></div>
     </div>
   </body>
 </html>
