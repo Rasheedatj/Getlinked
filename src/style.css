@@ -1,3 +1,10 @@
+/* .home {
+  background-image: url(/src/Images/Purple-Lens-Flare-PNG.png);
+  background-repeat: no-repeat;
+  background-position: top -52px left -258px;
+  background-blend-mode: hard-light;
+} */
+
 .hero {
   background-image: url(/src/Images/Creative-bulb.png),
     url(/src/Images/chain.png), url(/src/Images/fire.png),
@@ -19,9 +26,6 @@
 
   top: -7%;
   right: -10%;
-
-  /* background: url(/src/Images/bubble.png), 105.862% 104.281% no-repeat; */
-  background-blend-mode: hard-light;
 }
 
 #overview {
