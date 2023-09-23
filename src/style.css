@@ -4,7 +4,7 @@
     url(/src/Images/star_bright.png), url(/src/Images/star.png),
     url(/src/Images/star.png), url(/src/Images/curve.svg);
   background-repeat: no-repeat;
-  background-position: top 20% left 40%, left 44% top 48%, right 50% top 48%,
+  background-position: top 20% left 40%, left 50% top 48%, right 46% top 48%,
     top 15% left 5%, right 40% top 20%, left 40% bottom 35%, top 13% right 3%;
   position: relative;
 }
