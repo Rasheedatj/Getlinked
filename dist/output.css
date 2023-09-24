@@ -1845,6 +1845,10 @@ body {
     font-size: 2rem;
   }
 
+  .md\:text-\[146px\]{
+    font-size: 146px;
+  }
+
   .md\:leading-\[43\.88px\]{
     line-height: 43.88px;
   }
