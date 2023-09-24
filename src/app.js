@@ -25,6 +25,10 @@ const contactemail = document.querySelector('.contact .email');
 const contactMessage = document.querySelector('.contact textarea');
 const contactForm = document.querySelector('.contact');
 const silver = document.querySelectorAll('#silver');
+const input = document.querySelectorAll('input');
+const formInput = document.querySelectorAll(
+  'form input, form select, form textarea'
+);
 
 const animateElement = [trophy, cloud, padlock, judge, rule, idea];
 let countdownInterval;
@@ -252,6 +256,23 @@ async function postContact() {
   }
 }
 
+// add border to ctive input
+function onClickBox(e) {
+  formInput.forEach((item) => {
+    item.style.borderColor = '#ffffff';
+  });
+  e.target.style.borderColor = '#D434FE';
+}
+
+// back to top button
+function scrollToTop() {
+  if (document.documentElement.scrollTop === 0) {
+    document.querySelector('.top').classList.remove('active');
+  } else {
+    document.querySelector('.top').classList.add('active');
+  }
+}
+
 function init() {
   switch (global) {
     case '/':
@@ -260,6 +281,7 @@ function init() {
       menuBtn.addEventListener('click', openMenu);
       closeBtn.addEventListener('click', closeMenu);
       animateFunc();
+      window.addEventListener('scroll', scrollToTop);
       break;
     case '/src/register.html':
       registerBack.addEventListener('click', () => {
@@ -267,12 +289,16 @@ function init() {
       });
       getCategory();
       register.addEventListener('submit', verifyForm);
+      document.querySelector('form').addEventListener('click', onClickBox);
+
       break;
     case '/src/contact.html':
       contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         postContact();
       });
+      document.querySelector('form').addEventListener('click', onClickBox);
+
       break;
   }
 }
