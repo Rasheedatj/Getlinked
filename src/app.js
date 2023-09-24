@@ -125,7 +125,7 @@ function animateFunc() {
   });
 }
 
-// form verification  and then registration
+// form verification  and then call postInfo function
 function verifyForm(e) {
   e.preventDefault();
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -155,6 +155,15 @@ function verifyForm(e) {
   );
 
   setTimeout(() => errorMsg.classList.remove('active'), 5750);
+}
+
+// add spinner
+function showLoader() {
+  document.querySelector('#loader').classList.add('active');
+}
+// remove spinner
+function removeLoader() {
+  document.querySelector('#loader').classList.remove('active');
 }
 
 // get category from api
@@ -196,7 +205,7 @@ async function postInfo() {
       category: category.value,
       privacy_poclicy_accepted: check.checked ? true : false,
     };
-    document.querySelector('#loader').classList.add('active');
+    showLoader();
 
     const data = await fetch(
       'https://backend.getlinked.ai/hackathon/registration',
@@ -212,12 +221,18 @@ async function postInfo() {
       throw new Error('User EXist');
     }
 
-    document.querySelector('#loader').classList.remove('active');
+    removeLoader();
     congratulationsMsg.classList.add('open');
 
     const result = await data.json();
   } catch (error) {
-    error.message === 'User EXist' ? errorMsg(error) : '';
+    if (error.message === 'User EXist') {
+      // remove existing error message if there is
+      if (document.querySelector('.exist')) {
+        document.querySelector('.exist').remove();
+      }
+      errorMsg(error);
+    }
   }
 }
 
@@ -226,6 +241,7 @@ function errorMsg(err) {
   document.querySelector('#loader').classList.remove('active');
   const errElement = document.createElement('p');
   errElement.textContent = err;
+  errElement.classList.add('exist');
   errElement.style.color = '#FF26B9';
   errElement.style.fontStyle = 'italic';
   errElement.style.fontSize = '12px';
@@ -242,6 +258,7 @@ async function postContact() {
       first_name: contactName.value,
       message: contactMessage.value,
     };
+    showLoader();
 
     const data = await fetch(
       ' https://backend.getlinked.ai/hackathon/contact-form',
@@ -258,7 +275,11 @@ async function postContact() {
     }
 
     const result = await data.json();
+    removeLoader();
+
+    // shpw sucess messaage
     document.querySelector('.success').classList.add('active');
+
     // remove success message after 3 seconds
     setTimeout(() => {
       document.querySelector('.success').classList.remove('active');
@@ -267,7 +288,7 @@ async function postContact() {
     // reload page after error message is removed
     setTimeout(() => {
       window.location.reload();
-    }, 3300);
+    }, 3100);
   } catch (error) {
     console.log(error);
   }
