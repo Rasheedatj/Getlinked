@@ -1752,6 +1752,10 @@ body {
     margin-top: 2rem;
   }
 
+  .md\:flex{
+    display: flex;
+  }
+
   .md\:w-\[80\%\]{
     width: 80%;
   }
@@ -1776,6 +1780,22 @@ body {
 
   .md\:w-\[50\%\]{
     width: 50%;
+  }
+
+  .md\:w-\[40\%\]{
+    width: 40%;
+  }
+
+  .md\:w-\[60\%\]{
+    width: 60%;
+  }
+
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
+  .md\:items-start{
+    align-items: flex-start;
   }
 
   .md\:items-center{

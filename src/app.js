@@ -1,3 +1,4 @@
+// declaring variables
 const global = window.location.pathname;
 
 const menu = document.querySelector('.menu');
@@ -32,13 +33,18 @@ const formInput = document.querySelectorAll(
 
 const animateElement = [trophy, cloud, padlock, judge, rule, idea];
 let countdownInterval;
+
+// open hamburger menu
 function openMenu() {
   menu.classList.add('open');
 }
+
+// remove hamburger menu
 function closeMenu() {
   menu.classList.remove('open');
 }
 
+// deadline countdown
 function updateCountdown() {
   const targetDate = new Date('September 30, 2023 00:00:00').getTime();
   const hoursElement = document.getElementById('hours');
@@ -119,6 +125,7 @@ function animateFunc() {
   });
 }
 
+// form verification  and then registration
 function verifyForm(e) {
   e.preventDefault();
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -266,7 +273,7 @@ async function postContact() {
   }
 }
 
-// add border to ctive input
+// add border to active input
 function onClickBox(e) {
   formInput.forEach((item) => {
     item.style.borderColor = '#ffffff';
@@ -283,6 +290,7 @@ function scrollToTop() {
   }
 }
 
+// router
 function init() {
   switch (global) {
     case '/':
@@ -313,4 +321,5 @@ function init() {
   }
 }
 
+// call router function on content load
 document.addEventListener('DOMContentLoaded', init);
