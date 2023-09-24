@@ -235,6 +235,7 @@ async function postContact() {
       first_name: contactName.value,
       message: contactMessage.value,
     };
+
     const data = await fetch(
       ' https://backend.getlinked.ai/hackathon/contact-form',
       {
@@ -250,7 +251,16 @@ async function postContact() {
     }
 
     const result = await data.json();
-    window.location.reload();
+    document.querySelector('.success').classList.add('active');
+    // remove success message after 3 seconds
+    setTimeout(() => {
+      document.querySelector('.success').classList.remove('active');
+    }, 3000);
+
+    // reload page after error message is removed
+    setTimeout(() => {
+      window.location.reload();
+    }, 3300);
   } catch (error) {
     console.log(error);
   }
