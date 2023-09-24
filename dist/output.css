@@ -1772,6 +1772,14 @@ body {
     width: 70%;
   }
 
+  .md\:w-\[40\%\]{
+    width: 40%;
+  }
+
+  .md\:w-\[60\%\]{
+    width: 60%;
+  }
+
   .md\:w-max{
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -1780,14 +1788,6 @@ body {
 
   .md\:w-\[50\%\]{
     width: 50%;
-  }
-
-  .md\:w-\[40\%\]{
-    width: 40%;
-  }
-
-  .md\:w-\[60\%\]{
-    width: 60%;
   }
 
   .md\:flex-row{
